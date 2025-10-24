@@ -23,8 +23,8 @@
         "break",
         "title",
         {
-            "type": "os",
-             "keyColor": "blue"
+    "type": "custom",
+    "format": "\u001b[34mOS\u001b[0m \u001b[37mNyarch linux\u001b[0m"
         },
         {
             "type": "kernel",
