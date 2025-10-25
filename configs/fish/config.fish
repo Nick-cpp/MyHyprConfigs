@@ -3,7 +3,6 @@
 #################
 
 alias m="micro"
-alias f="fastfetch"
 alias g="git"
 alias c="clear"
 alias sp="sudo pacman"
