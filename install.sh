@@ -18,6 +18,6 @@ echo copying the cursor theme
 sleep 2
 sudo cp -rf ~/MyHyprConfigs/Mogo-Candy-Black/ /usr/share/icons/
 chmod +x ~/power-menu.sh
-copying configs
+echo copying configs
 sleep 2
 cp -rf ~/MyHyprConfigs/configs/* ~/.config/
