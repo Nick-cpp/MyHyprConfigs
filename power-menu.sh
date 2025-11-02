@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Меню с опциями питания
 choice=$(echo -e "Reboot\nShutdown" | wofi --dmenu --prompt="Power Menu" --height=120 --width=250)
 
 case "$choice" in
