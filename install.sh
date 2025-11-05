@@ -1,12 +1,13 @@
 cd
 echo installing needed packages
 sleep 2
-sudo pacman -Syu nwg-look gthumb haruna imagemagick base-devel hyprland waybar wofi firefox thunar ttf-font-awesome otf-font-awesome ttf-jetbrains-mono fish pkgfile ttf-dejavu powerline-fonts inetutils fastfetch pavucontrol hyprshot hyprlock micro gvfs gvfs-afc gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb udisks2 swww git
+sudo pacman -Syu noto-fonts-emoji nwg-look gthumb haruna imagemagick base-devel hyprland waybar wofi firefox thunar ttf-font-awesome otf-font-awesome ttf-jetbrains-mono fish pkgfile ttf-dejavu powerline-fonts inetutils fastfetch pavucontrol hyprshot hyprlock micro gvfs gvfs-afc gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb udisks2 swww git
 git clone https://github.com/Nick-cpp/MyHyprConfigs
-echo creating ~/Pictures and ~/Pictures/Wallpapers directories
+echo creating ~/Pictures and ~/Pictures/Wallpapers and ~/Pictures/Screenshots directories
 sleep 2
 mkdir ~/Pictures
 mkdir ~/Pictures/Wallpapers
+mkdir ~/Pictures/Screenshots
 echo copying wallpapers to ~/Pictures/Wallpapers/
 sleep 2
 cp -rf ~/MyHyprConfigs/Wallpapers ~/Pictures/Wallpapers/
