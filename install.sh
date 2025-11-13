@@ -6,7 +6,7 @@ git clone https://github.com/Nick-cpp/MyHyprConfigs
 echo creating ~/Pictures and ~/Pictures/Wallpapers and ~/Pictures/Screenshots directories
 sleep 2
 mkdir -p ~/Pictures/Wallpapers
-mkdir -p ~/Pictures/Screenshots
+mkdir ~/Pictures/Screenshots
 echo copying wallpapers to ~/Pictures/Wallpapers/
 sleep 2
 cp -rf ~/MyHyprConfigs/Wallpapers ~/Pictures/Wallpapers/
