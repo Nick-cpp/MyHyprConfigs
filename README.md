@@ -4,6 +4,8 @@ Packages
 
 waybar wofi firefox thunar ttf-font-awesome otf-font-awesome ttf-jetbrains-mono fish pkgfile ttf-dejavu powerline-fonts inetutils fastfetch pavucontrol hyprshot hyprlock micro gvfs gvfs-afc gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb udisks2 swww hyprpicker
 
+archarchive ( AUR )
+
 <img width="1916" height="1080" alt="image" src="https://github.com/user-attachments/assets/621dea26-0ffc-4130-ad47-a9f4bee2e7cd" />
 
 <img width="1202" height="545" alt="2025-11-10-203108_hyprshot" src="https://github.com/user-attachments/assets/4daedad8-b38f-45fe-b602-b7a2df9e2b2e" />
