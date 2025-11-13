@@ -5,9 +5,8 @@ sudo pacman -Syu hyprpicker noto-fonts-emoji nwg-look gthumb haruna imagemagick 
 git clone https://github.com/Nick-cpp/MyHyprConfigs
 echo creating ~/Pictures and ~/Pictures/Wallpapers and ~/Pictures/Screenshots directories
 sleep 2
-mkdir ~/Pictures
-mkdir ~/Pictures/Wallpapers
-mkdir ~/Pictures/Screenshots
+mkdir -p ~/Pictures/Wallpapers
+mkdir -p ~/Pictures/Screenshots
 echo copying wallpapers to ~/Pictures/Wallpapers/
 sleep 2
 cp -rf ~/MyHyprConfigs/Wallpapers ~/Pictures/Wallpapers/
