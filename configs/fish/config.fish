@@ -2,7 +2,7 @@
 #### ALIASES ####
 #################
 
-alias sp = "sudo pacman"
+alias sp="sudo pacman"
 alias suka="sudo archarchive"
 alias m="micro"
 alias g="git"
