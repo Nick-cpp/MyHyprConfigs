@@ -8,7 +8,7 @@ mkdir -p ~/Pictures/Wallpapers
 mkdir ~/Pictures/Screenshots
 echo copying wallpapers to ~/Pictures/Wallpapers/
 sleep 2
-cp -rf ~/MyHyprConfigs/Wallpapers/* ~/Pictures/Wallpapers/
+cp ~/MyHyprConfigs/Wallpapers/* ~/Pictures/Wallpapers/
 echo copying power and network menus to ~/
 sleep 2
 cp ~/MyHyprConfigs/power-menu.sh ~/
