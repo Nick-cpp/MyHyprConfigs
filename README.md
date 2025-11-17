@@ -21,3 +21,5 @@ archarchive ( AUR )
 <img width="1916" height="1080" alt="image" src="https://github.com/user-attachments/assets/67ed2eb7-f735-4ae7-a1ce-5f4c76386288" />
 
 <img width="1917" height="1080" alt="image" src="https://github.com/user-attachments/assets/ba43a974-1e26-4957-b8ba-ba955367f21b" />
+
+<img width="1917" height="1080" alt="image" src="https://github.com/user-attachments/assets/f841ccde-3415-4a11-bdfd-7138f7348af3" />
