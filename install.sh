@@ -16,6 +16,7 @@ echo copying the cursor theme
 sleep 2
 unzip ~/MyHyprConfigs/Moga-Candy-Black.zip
 sudo cp -rf ~/Moga-Candy-Black/Moga-Candy-Black /usr/share/icons/
+sudo cp -rf ~/Moga-Candy-Black/Moga-Candy-Black ~/.local/share/icons/
 chmod +x ~/power-menu.sh
 echo copying configs
 sleep 2
