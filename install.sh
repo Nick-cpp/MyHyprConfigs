@@ -9,12 +9,14 @@ mkdir ~/Pictures/Screenshots
 echo copying wallpapers to ~/Pictures/Wallpapers/
 sleep 2
 cp ~/MyHyprConfigs/Wallpapers/* ~/Pictures/Wallpapers/
-echo copying power and network menus to ~/
+echo copying power menu to ~/
 sleep 2
 cp ~/MyHyprConfigs/power-menu.sh ~/
-echo copying the cursor theme
+echo extracting the cursor theme
 sleep 2
 unzip ~/MyHyprConfigs/Moga-Candy-Black.zip
+echo copying the cursor theme
+sleep 2
 sudo cp -rf ~/Moga-Candy-Black/Moga-Candy-Black /usr/share/icons/
 sudo cp -rf ~/Moga-Candy-Black/Moga-Candy-Black ~/.local/share/icons/
 chmod +x ~/power-menu.sh
