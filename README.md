@@ -23,3 +23,5 @@ archarchive cbonsai ( AUR )
 <img width="1917" height="1080" alt="image" src="https://github.com/user-attachments/assets/ba43a974-1e26-4957-b8ba-ba955367f21b" />
 
 <img width="1917" height="1080" alt="image" src="https://github.com/user-attachments/assets/f841ccde-3415-4a11-bdfd-7138f7348af3" />
+
+<img width="1917" height="1080" alt="image" src="https://github.com/user-attachments/assets/a97e74f3-043a-416d-af5d-cd96fe8c3e5b" />
