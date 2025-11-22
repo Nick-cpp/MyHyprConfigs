@@ -4,7 +4,7 @@ Packages
 
 waybar wofi firefox thunar ttf-font-awesome otf-font-awesome ttf-jetbrains-mono fish pkgfile ttf-dejavu powerline-fonts inetutils fastfetch pavucontrol hyprshot hyprlock micro gvfs gvfs-afc gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb udisks2 swww hyprpicker
 
-archarchive ( AUR )
+archarchive cbonsai ( AUR )
 
 <img width="1915" height="1080" alt="image" src="https://github.com/user-attachments/assets/60d05cb3-4882-4bcb-b293-75d7c3a814b3" />
 
