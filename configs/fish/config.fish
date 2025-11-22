@@ -10,6 +10,7 @@ alias c="clear"
 alias fucking="sudo"
 alias nyaofetch="fastfetch"
 alias wmconf="m ~/.config/hypr/hyprland.conf"
+alias plant="cbonsai"
 
 if status is-interactive
 end
