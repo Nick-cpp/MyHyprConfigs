@@ -1,2 +1,3 @@
 2025.11.21
 Updated blur configuration
+Added a "plant" alias in fish config
