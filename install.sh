@@ -1,7 +1,7 @@
 cd
 echo installing needed packages
 sleep 2
-sudo pacman -Syu unzip hyprpicker noto-fonts-emoji noto-fonts noto-fonts-cjk nwg-look gthumb haruna imagemagick base-devel hyprland waybar wofi firefox thunar ttf-font-awesome otf-font-awesome ttf-jetbrains-mono fish pkgfile ttf-dejavu powerline-fonts inetutils fastfetch pavucontrol hyprshot hyprlock micro gvfs gvfs-afc gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb udisks2 swww git
+sudo pacman -Syu gvim unzip hyprpicker noto-fonts-emoji noto-fonts noto-fonts-cjk nwg-look gthumb haruna imagemagick base-devel hyprland waybar wofi firefox thunar ttf-font-awesome otf-font-awesome ttf-jetbrains-mono fish pkgfile ttf-dejavu powerline-fonts inetutils fastfetch pavucontrol hyprshot hyprlock gvfs gvfs-afc gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb udisks2 swww git
 echo creating ~/Pictures and ~/Pictures/Wallpapers and ~/Pictures/Screenshots directories
 sleep 2
 mkdir -p ~/Pictures/Wallpapers
@@ -12,6 +12,7 @@ cp ~/MyHyprConfigs/Wallpapers/* ~/Pictures/Wallpapers/
 echo copying power menu to ~/
 sleep 2
 cp ~/MyHyprConfigs/power-menu.sh ~/
+chmod +x ~/power-menu.sh
 echo extracting the cursor theme
 sleep 2
 unzip ~/MyHyprConfigs/Moga-Candy-Black.zip
@@ -19,7 +20,7 @@ echo copying the cursor theme
 sleep 2
 sudo cp -rf ~/Moga-Candy-Black/Moga-Candy-Black /usr/share/icons/
 sudo cp -rf ~/Moga-Candy-Black/Moga-Candy-Black ~/.local/share/icons/
-chmod +x ~/power-menu.sh
 echo copying configs
 sleep 2
+cp ~/MyHyprConfigs/.vimrc ~/.vimrc
 cp -rf ~/MyHyprConfigs/configs/* ~/.config/
