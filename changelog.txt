@@ -3,3 +3,5 @@ Updated blur configuration
 2025.11.22
 Added a "plant" alias in fish config
 Updated blur configuration
+2025.11.25
+Added vim configuration
