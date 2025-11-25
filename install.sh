@@ -9,10 +9,12 @@ mkdir ~/Pictures/Screenshots
 echo copying wallpapers to ~/Pictures/Wallpapers/
 sleep 2
 cp ~/MyHyprConfigs/Wallpapers/* ~/Pictures/Wallpapers/
-echo copying power menu to ~/
+echo copying power menu and wallpaper changer to ~/
 sleep 2
+cp ~/MyHyprConfigs/wallpaper.sh ~/
 cp ~/MyHyprConfigs/power-menu.sh ~/
 chmod +x ~/power-menu.sh
+chmod +x ~/wallpaper.sh
 echo extracting the cursor theme
 sleep 2
 unzip ~/MyHyprConfigs/Moga-Candy-Black.zip
