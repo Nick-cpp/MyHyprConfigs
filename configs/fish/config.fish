@@ -4,7 +4,6 @@
 
 alias sp="sudo pacman"
 alias suka="sudo archarchive"
-alias m="micro"
 alias g="git"
 alias c="clear"
 alias fucking="sudo"
