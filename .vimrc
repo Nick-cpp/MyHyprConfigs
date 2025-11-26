@@ -2,7 +2,7 @@ set expandtab
 set smarttab
 set tabstop=4
 set softtabstop=4
-set shiftwidth=5
+set shiftwidth=4
 set relativenumber
 syntax on
 noremap <Up> <NOP>
