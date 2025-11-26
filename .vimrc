@@ -35,6 +35,3 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='deus'
 let g:airline_statusline_ontop=0
 let g:airline#extensions#tabline#formatter = 'default'
-
-" Автокомплиты через Tab
-inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
