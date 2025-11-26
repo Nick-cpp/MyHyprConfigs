@@ -35,3 +35,11 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='deus'
 let g:airline_statusline_ontop=0
 let g:airline#extensions#tabline#formatter = 'default'
+
+inoremap ( ()<Esc>i
+inoremap { {}<Esc>i
+inoremap {<CR> {<CR>}<Esc>O
+inoremap [ []<Esc>i
+inoremap < <><Esc>i
+inoremap ' ''<Esc>i
+inoremap " ""<Esc>i
