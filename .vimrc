@@ -10,7 +10,6 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 set clipboard=unnamedplus
-set hlsearch
 set so=30
 set incsearch
 set autoindent
@@ -22,12 +21,17 @@ set encoding=utf8
 filetype plugin indent on
 
 call plug#begin("~/.vim/plugged")
+Plug 'vim-syntastic/syntastic'
 Plug 'preservim/nerdcommenter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
+let g:syntastic_enable_signs = 0
+let g:syntastic_enable_highlighting = 1
+highlight SyntasticError cterm=underline ctermfg=red
+highlight SyntasticWarning cterm=underline ctermfg=yellow
 let g:NERDCreateDefaultMappings = 1
 
 let g:airline#extensions#tabline#enabled = 1
