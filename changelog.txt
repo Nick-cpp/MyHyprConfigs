@@ -8,3 +8,4 @@ Added vim configuration
 2025.11.26
 Added some plugins for vim
 Added error underscoring in vim like in code editor
+( plugins configuration )
