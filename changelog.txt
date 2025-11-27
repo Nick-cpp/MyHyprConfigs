@@ -9,3 +9,5 @@ Added vim configuration
 Added some plugins for vim
 Added error underscoring in vim like in code editor
 ( plugins configuration )
+2025.11.27
+Fixed cursor configuration
