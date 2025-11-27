@@ -24,8 +24,7 @@ sleep 2
 unzip ~/MyHyprConfigs/Moga-Candy-Black.zip
 echo copying the cursor theme
 sleep 2
-sudo cp -rf ~/Moga-Candy-Black/Moga-Candy-Black /usr/share/icons/
-sudo cp -rf ~/Moga-Candy-Black/Moga-Candy-Black ~/.local/share/icons/
+sudo cp -rf ~/Moga-Candy-Black/Moga-Candy-Black/ ~/.local/share/icons/
 echo copying configs
 sleep 2
 cp ~/MyHyprConfigs/.vimrc ~/.vimrc
