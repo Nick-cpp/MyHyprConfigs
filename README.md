@@ -1,4 +1,4 @@
-Don't copy theese configs before editing!!! ( edit the monitors settings )
+Don't copy theese configs before editing!!!
 
 Packages
 
