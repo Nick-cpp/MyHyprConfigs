@@ -16,3 +16,4 @@ Fixed waybar configuration
 Updated window borders
 Updated out gaps
 Installed auto-pairs vim pluggin
+Updated neofetch config
