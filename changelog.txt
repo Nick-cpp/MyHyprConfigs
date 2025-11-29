@@ -12,3 +12,6 @@ Added error underscoring in vim like in code editor
 2025.11.27
 Fixed cursor configuration
 Fixed waybar configuration
+2025.11.29
+Updated window borders
+Updated out gaps
