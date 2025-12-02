@@ -8,6 +8,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 echo creating ~/Pictures and ~/Pictures/Wallpapers and ~/Pictures/Screenshots directories
 sleep 2
+echo installing fish shell
+chsh -s /bin/fish
 mkdir -p ~/Pictures/Wallpapers
 mkdir ~/Pictures/Screenshots
 echo copying wallpapers to ~/Pictures/Wallpapers/
