@@ -17,3 +17,5 @@ Updated window borders
 Updated out gaps
 Installed auto-pairs vim pluggin
 Updated neofetch config
+2025.12.02
+Now installer changes shell
