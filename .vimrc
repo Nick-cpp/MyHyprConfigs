@@ -6,7 +6,6 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set relativenumber
-set clipboard=unnamedplus
 set so=30
 set incsearch
 set autoindent
@@ -43,3 +42,16 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+if executable('wl-copy')
+    augroup wl_clipboard_yank
+        autocmd!
+        autocmd TextYankPost * if v:event.operator == 'y' | call system('wl-copy', @") | endif
+    augroup END
+    
+    vnoremap <C-c> :w !wl-copy<CR><CR>
+    nnoremap <C-v> :r !wl-paste<CR>
+    inoremap <C-v> <Esc>:r !wl-paste<CR>a
+    vnoremap <leader>y :w !wl-copy<CR><CR>
+    nnoremap <leader>p :r !wl-paste<CR>
+endif
