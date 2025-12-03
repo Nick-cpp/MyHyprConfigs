@@ -19,3 +19,6 @@ Installed auto-pairs vim pluggin
 Updated neofetch config
 2025.12.02
 Now installer changes shell
+2025.12.03
+No more using gvim for clipboard
+Installer is now compiling vim with system clipboard configuration
