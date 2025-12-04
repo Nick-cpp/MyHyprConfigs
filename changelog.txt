@@ -22,3 +22,5 @@ Now installer changes shell
 2025.12.03
 No more using gvim for clipboard
 Installer is now compiling vim with system clipboard configuration
+2025.12.04
+Added prompt user to reboot after installation
