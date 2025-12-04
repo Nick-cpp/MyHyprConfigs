@@ -52,3 +52,11 @@ echo copying configs
 sleep 2
 cp ~/MyHyprConfigs/.vimrc ~/.vimrc
 cp -rf ~/MyHyprConfigs/configs/* ~/.config/
+
+echo "Installer has finished its work. Reboot the computer? y/n"
+read -r reboot_choice
+if [[ "$reboot_choice" =~ ^[Yy]$ ]]; then
+    sudo reboot
+else
+    echo "Reboot skipped. Changes may require a restart to take effect."
+fi
