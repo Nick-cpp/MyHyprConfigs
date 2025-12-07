@@ -24,3 +24,5 @@ No more using gvim for clipboard
 Installer is now compiling vim with system clipboard configuration
 2025.12.04
 Added prompt user to reboot after installation
+2025.12.07
+No more installing powerline-fonts
