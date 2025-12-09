@@ -23,8 +23,7 @@
         "break",
         "title",
         {
-    "type": "custom",
-    "format": "\u001b[34mOS\u001b[0m \u001b[37mNyarch Linux\u001b[0m"
+            "type": "os"
         },
         {
             "type": "kernel",
