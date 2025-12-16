@@ -28,3 +28,5 @@ Added prompt user to reboot after installation
 No more installing powerline-fonts
 2025.12.08
 Added new wallpaper
+2025.12.16
+Moved wallpaper and power-menu scripts to ~/.scripts/
