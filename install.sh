@@ -36,12 +36,14 @@ mkdir ~/Pictures/Screenshots
 echo copying wallpapers to ~/Pictures/Wallpapers/
 sleep 2
 cp ~/MyHyprConfigs/Wallpapers/* ~/Pictures/Wallpapers/
-echo copying power menu and wallpaper changer to ~/.scripts/
+echo copying eye break script, power menu and wallpaper changer to ~/.scripts/
 sleep 2
 mkdir ~/.scripts/
 cp ~/MyHyprConfigs/wallpaper.sh ~/.scripts/
+cp ~/MyHyprConfigs/eye.sh ~/.scripts/
 cp ~/MyHyprConfigs/power-menu.sh ~/.scripts/
 chmod +x ~/.scripts/power-menu.sh
+chmod +x ~/.scripts/eye.sh
 chmod +x ~/.scripts/wallpaper.sh
 echo extracting the cursor theme
 sleep 2
