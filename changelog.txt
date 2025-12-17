@@ -30,3 +30,6 @@ No more installing powerline-fonts
 Added new wallpaper
 2025.12.16
 Moved wallpaper and power-menu scripts to ~/.scripts/
+2025.12.17
+My eyes hurts sometimes so i made eye break script and added it to autostart
+Use eye.sh --interval=number  to set interval minutes time
