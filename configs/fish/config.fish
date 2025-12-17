@@ -3,7 +3,6 @@
 #################
 
 alias sp="sudo pacman"
-alias suka="sudo archarchive"
 alias g="git"
 alias c="clear"
 alias fucking="sudo"
