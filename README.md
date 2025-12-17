@@ -4,7 +4,7 @@ Packages
 
 waybar wofi firefox thunar ttf-font-awesome otf-font-awesome ttf-jetbrains-mono fish pkgfile ttf-dejavu inetutils fastfetch pavucontrol hyprshot hyprlock micro gvfs gvfs-afc gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb udisks2 swww hyprpicker
 
-archarchive cbonsai wofi-calc ( AUR )
+cbonsai wofi-calc ( AUR )
 
 <img width="1914" height="1080" alt="image" src="https://github.com/user-attachments/assets/c072e956-7ce7-43e1-b0e4-d5cd9dce91ab" />
 
