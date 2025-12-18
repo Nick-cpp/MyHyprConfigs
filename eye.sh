@@ -43,8 +43,7 @@ while true; do
                 echo -ne \"\\\rTime left: \$formatted_time\"
                 sleep 1
             done
-            echo -ne \"\\\rBreak finished!                \"
-            sleep 2
+            exit 0
         '"
         SHORT_BREAK_COUNT=$((SHORT_BREAK_COUNT + 1))
         rm -f "$LOCK_FILE"
@@ -66,8 +65,7 @@ while true; do
                     echo -ne \"\\\rTime left: \$formatted_time\"
                     sleep 1
                 done
-                echo -ne \"\\\rBreak finished!                \"
-                sleep 2
+                exit 0
             '"
             LONG_BREAK_COUNT=1
             rm -f "$LOCK_FILE"
@@ -86,8 +84,7 @@ while true; do
                     echo -ne \"\\\rTime left: \$formatted_time\"
                     sleep 1
                 done
-                echo -ne \"\\\rBreak finished!                \"
-                sleep 2
+                exit 0
             '"
             LONG_BREAK_COUNT=0
             rm -f "$LOCK_FILE"
