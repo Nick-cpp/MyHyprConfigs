@@ -12,7 +12,7 @@ case "$choice" in
     "Shutdown")
         confirm=$(echo -e "Yes\nNo" | wofi --dmenu --prompt="Shutdown?" --height=100 --width=200)
         if [ "$confirm" = "Yes" ]; then
-            shutdown now
+            poweroff
         fi
         ;;
 esac
