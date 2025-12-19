@@ -10,4 +10,5 @@ cbonsai wofi-calc ( AUR )
 
 <img width="1917" height="1080" alt="image" src="https://github.com/user-attachments/assets/f48fbc06-5dcd-481a-b985-9f7428461737" />
 
-<img width="1914" height="1080" alt="image" src="https://github.com/user-attachments/assets/56488fdc-db6e-4bad-9311-fcffcff9e40f" />
+<img width="1917" height="1080" alt="image" src="https://github.com/user-attachments/assets/d34052b3-1ab9-450a-bac5-8455764bef0d" />
+
