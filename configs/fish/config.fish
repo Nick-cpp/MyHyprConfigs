@@ -6,7 +6,6 @@ alias sp="sudo pacman"
 alias g="git"
 alias c="clear"
 alias fucking="sudo"
-alias nyaofetch="fastfetch"
 alias wmconf="vim ~/.config/hypr/hyprland.conf"
 alias plant="cbonsai"
 
