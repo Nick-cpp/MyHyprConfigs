@@ -41,8 +41,10 @@ sleep 2
 mkdir ~/.scripts/
 cp ~/MyHyprConfigs/wallpaper.sh ~/.scripts/
 cp ~/MyHyprConfigs/eye.sh ~/.scripts/
+cp ~/MyHyprConfigs/wofi-search.sh ~/.scripts/
 cp ~/MyHyprConfigs/power-menu.sh ~/.scripts/
 chmod +x ~/.scripts/power-menu.sh
+chmod +x ~/.scripts/wofi-search.sh
 chmod +x ~/.scripts/eye.sh
 chmod +x ~/.scripts/wallpaper.sh
 echo extracting the cursor theme
