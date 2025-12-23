@@ -46,7 +46,7 @@ sleep 2
 cp ~/MyHyprConfigs/Wallpapers/* ~/Pictures/Wallpapers/
 
 echo ""
-echo "Are you using Artix Linux? (dinit)"
+echo "Are you using Artix Linux? (Needs elogind)"
 read -p "Enter 'yes' or 'no': " use_artix
 
 echo "Copying scripts to ~/.scripts/..."
