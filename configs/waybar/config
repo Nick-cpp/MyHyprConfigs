@@ -29,7 +29,7 @@
   },
   "custom/arch": {
     "format": "\uf31f ",
-    "tooltip": true,
+    "tooltip-format": "btw",
     "on-click": "pgrep -x wofi && pkill wofi || wofi --show drun -I"
   },
   "hyprland/workspaces": {
