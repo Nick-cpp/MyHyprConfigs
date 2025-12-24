@@ -1,48 +1,105 @@
 #!/bin/bash
 
-query=$(wofi --show dmenu -p "Wiki Search:" --width 250 --height 50)
+cd
 
-if [[ -n "$query" ]]; then
-    target=$(echo -e "Arch Wiki\nArtix Wiki" | wofi --show dmenu -i -p "Select Source:" --width 250 --height 100)
+echo "Installing needed packages..."
+sleep 2
+sudo pacman -Syu ttf-space-mono-nerd unzip hyprpicker noto-fonts-emoji noto-fonts noto-fonts-cjk nwg-look gthumb haruna imagemagick base-devel hyprland waybar wofi firefox thunar ttf-font-awesome otf-font-awesome ttf-jetbrains-mono fish pkgfile ttf-dejavu inetutils fastfetch pavucontrol hyprshot hyprlock gvfs gvfs-afc gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb udisks2 swww git
+sudo pacman -R vim
 
-    if [[ -z "$target" ]]; then
-        exit 0
-    fi
+echo "Compiling vim with system clipboard enabled..."
+sleep 2
+git clone https://github.com/vim/vim.git
+cd vim
+./configure \
+    --with-features=huge \
+    --enable-multibyte \
+    --enable-python3interp=yes \
+    --with-python3-command=python \
+    --enable-cscope \
+    --enable-terminal \
+    --enable-autoservername \
+    --enable-fontset \
+    --with-wayland \
+    --enable-gui=no \
+    --with-x=no
 
-    urlencode() {
-        local string="${1}"
-        local strlen=${#string}
-        local encoded=""
-        local pos c o
-        
-        for (( pos=0 ; pos<strlen ; pos++ )); do
-            c="${string:$pos:1}"
-            case "$c" in
-                [-_.~a-zA-Z0-9]) 
-                    o="${c}" 
-                    ;;
-                *) 
-                    printf -v o '%%%02X' "'$c"
-                    ;;
-            esac
-            encoded+="${o}"
-        done
-        echo "${encoded}"
-    }
+make -j$(nproc)
+sudo make install
+cd
 
-    encoded_query=$(urlencode "$query")
+echo "Installing vim plug..."
+sleep 2
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-    case "$target" in
-        "Arch Wiki")
-            url="https://wiki.archlinux.org/index.php?search=${encoded_query}"
-            ;;
-        "Artix Wiki")
-            url="https://wiki.artixlinux.org/index.php?action=search&q=${encoded_query}"
-            ;;
-        *)
-            exit 1
-            ;;
-    esac
-    
-    xdg-open "$url" > /dev/null 2>&1 & disown
+echo "Creating ~/Pictures and ~/Pictures/Wallpapers and ~/Pictures/Screenshots directories..."
+sleep 2
+
+echo "Installing fish shell..."
+chsh -s /bin/fish
+mkdir -p ~/Pictures/Wallpapers
+mkdir ~/Pictures/Screenshots
+
+echo "Copying wallpapers to ~/Pictures/Wallpapers/..."
+sleep 2
+cp ~/MyHyprConfigs/Wallpapers/* ~/Pictures/Wallpapers/
+
+echo ""
+echo "Are you using Artix Linux? (Needs elogind)"
+read -p "Enter 'yes' or 'no': " use_artix
+
+echo "Copying scripts to ~/.scripts/..."
+sleep 2
+mkdir -p ~/.scripts/
+
+cp ~/MyHyprConfigs/wallpaper.sh ~/.scripts/
+cp ~/MyHyprConfigs/eye.sh ~/.scripts/
+cp ~/MyHyprConfigs/wofi-search.sh ~/.scripts/
+
+if [[ "$use_artix" =~ ^[Yy][Ee][Ss]$|^[Yy]$ ]]; then
+    echo "Using Artix version of power menu (loginctl)..."
+    cp ~/MyHyprConfigs/power-menu-artix.sh ~/.scripts/power-menu.sh
+else
+    echo "Using standard version of power menu (reboot/poweroff)..."
+    cp ~/MyHyprConfigs/power-menu.sh ~/.scripts/power-menu.sh
+fi
+
+chmod +x ~/.scripts/power-menu.sh
+chmod +x ~/.scripts/wofi-search.sh
+chmod +x ~/.scripts/eye.sh
+chmod +x ~/.scripts/wallpaper.sh
+
+echo "Extracting the cursor theme..."
+sleep 2
+unzip ~/MyHyprConfigs/Moga-Candy-Black.zip
+
+echo "Copying the cursor theme..."
+sleep 2
+mkdir -p ~/.local/share/icons/
+sudo cp -rf ~/Moga-Candy-Black/Moga-Candy-Black/ ~/.local/share/icons/
+
+echo "Copying configs..."
+sleep 2
+cp ~/MyHyprConfigs/.vimrc ~/.vimrc
+cp -rf ~/MyHyprConfigs/configs/* ~/.config/
+
+echo ""
+echo "Are you using Arch Linux? (Waybar distro icon. If you will say no artix logo will be used)"
+read -p "Enter 'yes' or 'no': " use_arch
+
+if [[ "$use_arch" =~ ^[Yy][Ee][Ss]$|^[Yy]$ ]]; then
+    echo "Copying Arch‑specific Waybar config..."
+    cp ~/MyHyprConfigs/waybar-arch/* ~/.config/waybar/
+fi
+
+echo ""
+echo "Installer has finished its work."
+read -p "Reboot? (y/n): " reboot_choice
+
+if [[ "$reboot_choice" =~ ^[Yy]$ ]]; then
+    echo "Rebooting..."
+    sudo reboot
+else
+    echo "Reboot skipped. Changes may require a restart to take effect."
 fi
