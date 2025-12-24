@@ -5,6 +5,7 @@
   "margin-right": 0,
   "height": 28,
   "modules-left": [
+    "custom/arch",
     "hyprland/workspaces"
   ],
   "modules-center": [
@@ -24,8 +25,12 @@
     "max-length": 35,
     "rewrite": {
       "": "Hyprland"
-    },
-    "separate-outputs": true
+    }
+  },
+  "custom/arch": {
+    "format": "\uf31f ",
+    "tooltip": true,
+    "on-click": "pgrep -x wofi && pkill wofi || wofi --show drun -I"
   },
   "hyprland/workspaces": {
     "format": "{icon}",
