@@ -44,7 +44,7 @@
             "key": "OS Age",
             "folders": "/",
             "keyColor": "blue",
-            "format": "{days} days"
+            "format": "{days} days {hours} hours"
         },
         {
             "type": "wm",
