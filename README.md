@@ -6,9 +6,9 @@ waybar wofi firefox thunar ttf-font-awesome otf-font-awesome ttf-jetbrains-mono 
 
 cbonsai wofi-calc ( AUR )
 
-<img width="1914" height="1080" alt="image" src="https://github.com/user-attachments/assets/c072e956-7ce7-43e1-b0e4-d5cd9dce91ab" />
+<img width="1914" height="1080" alt="image" src="https://github.com/user-attachments/assets/21291bbb-9a81-48e5-b0eb-73d945e2f3f3" />
 
-<img width="1917" height="1080" alt="image" src="https://github.com/user-attachments/assets/f48fbc06-5dcd-481a-b985-9f7428461737" />
+<img width="1916" height="1080" alt="image" src="https://github.com/user-attachments/assets/0f204c7c-a663-4e9f-a909-be53f4a642d7" />
 
 <img width="1917" height="1080" alt="image" src="https://github.com/user-attachments/assets/d34052b3-1ab9-450a-bac5-8455764bef0d" />
 
