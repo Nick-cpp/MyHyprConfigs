@@ -23,14 +23,11 @@
         "break",
         "title",
         {
-            "type": "os"
-        },
-        {
-            "type": "kernel",
+            "type": "os",
             "keyColor": "blue"
         },
         {
-            "type": "host",
+            "type": "kernel",
             "keyColor": "blue"
         },
         {
@@ -41,6 +38,13 @@
             "type": "uptime",
             "format": "{2}h {3}m",
             "keyColor": "blue"
+        },
+        {
+            "type": "disk",
+            "key": "OS Age",
+            "folders": "/",
+            "keyColor": "blue",
+            "format": "{days} days"
         },
         {
             "type": "wm",
