@@ -1,0 +1,26 @@
+sort=-time
+layer=overlay
+background-color=#191919
+width=300
+height=110
+border-size=2
+border-color=#88c0d0
+border-radius=0
+max-icon-size=48
+default-timeout=2500
+ignore-timeout=1
+font=JetBrains Mono 12
+
+[urgency=low]
+border-color=#cccccc
+
+[urgency=normal]
+border-color=#33ccff
+
+[urgency=high]
+border-color=#191919
+default-timeout=0
+
+[category=mpd]
+default-timeout=2000
+group-by=category
