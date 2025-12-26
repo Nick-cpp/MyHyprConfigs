@@ -84,9 +84,9 @@ sleep 2
 cp ~/MyHyprConfigs/.vimrc ~/.vimrc
 cp -rf ~/MyHyprConfigs/configs/* ~/.config/
 
-if [[ "$use_artix" =~ ^[Yy]$ ]]; then
+if [[ ! "$use_artix" =~ ^[Yy][Ee][Ss]$|^[Yy]$ ]]; then
+    echo "Copying Arch-specific waybar config..."
     cp ~/MyHyprConfigs/waybar-arch/* ~/.config/waybar/
-else
 fi
 
 echo ""
