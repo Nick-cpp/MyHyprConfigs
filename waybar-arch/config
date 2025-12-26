@@ -28,7 +28,7 @@
     }
   },
   "custom/arch": {
-    "format": "\ue732 ",
+    "format": "\uf303 ",
     "tooltip-format": "btw",
     "on-click": "pgrep -x wofi && pkill wofi || wofi --show drun -I"
   },
