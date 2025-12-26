@@ -84,6 +84,11 @@ sleep 2
 cp ~/MyHyprConfigs/.vimrc ~/.vimrc
 cp -rf ~/MyHyprConfigs/configs/* ~/.config/
 
+if [[ "$use_artix" =~ ^[Yy]$ ]]; then
+    cp ~/MyHyprConfigs/waybar-arch/* ~/.config/waybar/
+else
+fi
+
 echo ""
 echo "Installer has finished its work."
 read -p "Reboot? (y/n): " reboot_choice
