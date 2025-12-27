@@ -38,3 +38,4 @@ Added NVIDIA enviroment variables
 Added mako configuration
 Added os age to fastfetch
 Added arch/artix icon on waybar
+New wallpapers
