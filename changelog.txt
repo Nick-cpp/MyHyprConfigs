@@ -39,3 +39,6 @@ Added mako configuration
 Added os age to fastfetch
 Added arch/artix icon on waybar
 New wallpapers
+2025.12.27-31
+Added windowrules for steam
+The first release of dotfiles
