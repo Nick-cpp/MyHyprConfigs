@@ -57,10 +57,10 @@ cp ~/MyHyprConfigs/scripts/* ~/.scripts/
 
 if [[ "$use_artix" =~ ^[Yy][Ee][Ss]$|^[Yy]$ ]]; then
     echo "Using Artix version of power menu (loginctl)..."
-    cp ~/MyHyprConfigs/power-menu-artix.sh ~/.scripts/power-menu.sh
+    cp ~/MyHyprConfigs/scripts/power-menu-artix.sh ~/.scripts/power-menu.sh
 else
     echo "Using standard version of power menu (reboot/poweroff)..."
-    cp ~/MyHyprConfigs/power-menu.sh ~/.scripts/power-menu.sh
+    cp ~/MyHyprConfigs/scripts/power-menu.sh ~/.scripts/power-menu.sh
 fi
 
 chmod +x ~/.scripts/*
