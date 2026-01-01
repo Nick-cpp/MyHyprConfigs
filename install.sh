@@ -65,10 +65,7 @@ else
     cp ~/MyHyprConfigs/power-menu.sh ~/.scripts/power-menu.sh
 fi
 
-chmod +x ~/.scripts/power-menu.sh
-chmod +x ~/.scripts/wofi-search.sh
-chmod +x ~/.scripts/eye.sh
-chmod +x ~/.scripts/wallpaper.sh
+chmod +x ~/.scripts/*
 
 echo "Extracting the cursor theme..."
 sleep 2
