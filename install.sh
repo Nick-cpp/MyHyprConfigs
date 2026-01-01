@@ -53,9 +53,7 @@ echo "Copying scripts to ~/.scripts/..."
 sleep 2
 mkdir -p ~/.scripts/
 
-cp ~/MyHyprConfigs/wallpaper.sh ~/.scripts/
-cp ~/MyHyprConfigs/eye.sh ~/.scripts/
-cp ~/MyHyprConfigs/wofi-search.sh ~/.scripts/
+cp ~/MyHyprConfigs/scripts/* ~/.scripts/
 
 if [[ "$use_artix" =~ ^[Yy][Ee][Ss]$|^[Yy]$ ]]; then
     echo "Using Artix version of power menu (loginctl)..."
