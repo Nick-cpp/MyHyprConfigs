@@ -42,3 +42,5 @@ New wallpapers
 2025.12.27-31
 Added windowrules for steam
 The first release of dotfiles
+2026.01.04
+Hyprland updated to 0.53 new windowrule syntax fixed
