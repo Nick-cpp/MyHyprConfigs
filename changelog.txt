@@ -44,3 +44,5 @@ Added windowrules for steam
 The first release of dotfiles
 2026.01.04
 Hyprland updated to 0.53 new windowrule syntax fixed
+2026.01.05
+Fixed pavucontrol and steam windowrules
