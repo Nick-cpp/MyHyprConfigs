@@ -40,7 +40,7 @@ while true; do
             echo \"\"
             for i in {$DURATION..1}; do
                 formatted_time=\$(printf \"%02d:%02d\" \$((i/60)) \$((i%60)))
-                echo -ne \"\\\r     Time left: \$formatted_time\"
+                echo -ne \"\\\r Time left: \$formatted_time\"
                 sleep 1
             done
             exit 0
@@ -62,7 +62,7 @@ while true; do
                 echo \"\"
                 for i in {300..1}; do
                     formatted_time=\$(printf \"%02d:%02d\" \$((i/60)) \$((i%60)))
-                    echo -ne \"\\\r     Time left: \$formatted_time\"
+                    echo -ne \"\\\r Time left: \$formatted_time\"
                     sleep 1
                 done
                 exit 0
@@ -81,7 +81,7 @@ while true; do
                 echo \"\"
                 for i in {600..1}; do
                     formatted_time=\$(printf \"%02d:%02d\" \$((i/60)) \$((i%60)))
-                    echo -ne \"\\\r     Time left: \$formatted_time\"
+                    echo -ne \"\\\r Time left: \$formatted_time\"
                     sleep 1
                 done
                 exit 0
