@@ -32,9 +32,9 @@ while true; do
     if [ $SHORT_BREAK_COUNT -lt 2 ]; then
         hyprctl dispatch exec "[float; size 325 200; center] kitty --title 'Eye Break' --class=eye-break -e bash -c '
             printf \"\033[1;31m\"
-            echo \"========================\"
+            echo \"==========================\"
             echo \"     EYE BREAK TIME!\"
-            echo \"========================\"
+            echo \"==========================\"
             printf \"\033[0m\"
             echo \"Look away for $DURATION seconds\"
             echo \"\"
@@ -54,9 +54,9 @@ while true; do
         if [ $LONG_BREAK_COUNT -eq 0 ]; then
             hyprctl dispatch exec "[float; size 325 200; center] kitty --title 'Long Eye Break' --class=eye-break -e bash -c '
                 printf \"\033[1;32m\"
-                echo \"========================\"
+                echo \"=========================\"
                 echo \"    LONG BREAK TIME!\"
-                echo \"========================\"
+                echo \"=========================\"
                 printf \"\033[0m\"
                 echo \"Look away for 5 minutes\"
                 echo \"\"
@@ -73,9 +73,9 @@ while true; do
         else
             hyprctl dispatch exec "[float; size 325 200; center] kitty --title 'Extra Long Eye Break' --class=eye-break -e bash -c '
                 printf \"\033[1;34m\"
-                echo \"========================\"
+                echo \"=========================\"
                 echo \" EXTRA LONG BREAK TIME!\"
-                echo \"========================\"
+                echo \"=========================\"
                 printf \"\033[0m\"
                 echo \"Look away for 10 minutes\"
                 echo \"\"
