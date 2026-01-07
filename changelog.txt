@@ -49,3 +49,6 @@ Fixed pavucontrol and steam windowrules
 2026.01.06
 Removed gaps in kitty
 Fixed eye.sh text formating
+2026.01.07
+Added gaps to kitty again
+Fixed eye.sh text formating
