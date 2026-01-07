@@ -32,15 +32,15 @@ while true; do
     if [ $SHORT_BREAK_COUNT -lt 2 ]; then
         hyprctl dispatch exec "[float; size 325 200; center] kitty --title 'Eye Break' --class=eye-break -e bash -c '
             printf \"\033[1;31m\"
-            echo \" =========================\"
-            echo \"      EYE BREAK TIME!\"
-            echo \" =========================\"
+            echo \"========================\"
+            echo \"     EYE BREAK TIME!\"
+            echo \"========================\"
             printf \"\033[0m\"
-            echo \" Look away for $DURATION seconds\"
+            echo \"Look away for $DURATION seconds\"
             echo \"\"
             for i in {$DURATION..1}; do
                 formatted_time=\$(printf \"%02d:%02d\" \$((i/60)) \$((i%60)))
-                echo -ne \"\\\r Time left: \$formatted_time\"
+                echo -ne \"\\\rTime left: \$formatted_time\"
                 sleep 1
             done
             exit 0
@@ -54,15 +54,15 @@ while true; do
         if [ $LONG_BREAK_COUNT -eq 0 ]; then
             hyprctl dispatch exec "[float; size 325 200; center] kitty --title 'Long Eye Break' --class=eye-break -e bash -c '
                 printf \"\033[1;32m\"
-                echo \" =========================\"
-                echo \"     LONG BREAK TIME!\"
-                echo \" =========================\"
+                echo \"========================\"
+                echo \"    LONG BREAK TIME!\"
+                echo \"========================\"
                 printf \"\033[0m\"
-                echo \" Look away for 5 minutes\"
+                echo \"Look away for 5 minutes\"
                 echo \"\"
                 for i in {300..1}; do
                     formatted_time=\$(printf \"%02d:%02d\" \$((i/60)) \$((i%60)))
-                    echo -ne \"\\\r Time left: \$formatted_time\"
+                    echo -ne \"\\\rTime left: \$formatted_time\"
                     sleep 1
                 done
                 exit 0
@@ -73,15 +73,15 @@ while true; do
         else
             hyprctl dispatch exec "[float; size 325 200; center] kitty --title 'Extra Long Eye Break' --class=eye-break -e bash -c '
                 printf \"\033[1;34m\"
-                echo \" =========================\"
-                echo \"  EXTRA LONG BREAK TIME!\"
-                echo \" =========================\"
+                echo \"========================\"
+                echo \" EXTRA LONG BREAK TIME!\"
+                echo \"========================\"
                 printf \"\033[0m\"
-                echo \" Look away for 10 minutes\"
+                echo \"Look away for 10 minutes\"
                 echo \"\"
                 for i in {600..1}; do
                     formatted_time=\$(printf \"%02d:%02d\" \$((i/60)) \$((i%60)))
-                    echo -ne \"\\\r Time left: \$formatted_time\"
+                    echo -ne \"\\\rTime left: \$formatted_time\"
                     sleep 1
                 done
                 exit 0
