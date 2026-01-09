@@ -16,17 +16,10 @@ function super
     su -c "$argv"
 end
 function fish_prompt
+    set -l green (set_color green)
+    set -l cyan (set_color cyan)
+    set -l blue (set_color blue)
+    set -l normal (set_color normal)
 
-    set_color black -b blue
-    echo -n " $USER "
-
-    set_color black -b blue
-    echo -n "" 
-
-    echo -n " " (prompt_pwd) " "
-
-    set_color blue -b normal
-    echo -n " "
-
-    set_color normal
+    echo -n -s $green $USER $normal " " $cyan (prompt_pwd) $magenta " ➜ " $normal
 end
