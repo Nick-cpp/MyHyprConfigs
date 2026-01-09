@@ -15,3 +15,17 @@ set -U fish_greeting
 function super
     su -c "$argv"
 end
+function fish_prompt
+    set_color black -b blue
+    echo -n " $USER "
+
+    set_color black -b blue
+    echo -n "" 
+
+    echo -n " " (prompt_pwd) " "
+
+    set_color blue -b normal
+    echo -n " "
+
+    set_color normal
+end
