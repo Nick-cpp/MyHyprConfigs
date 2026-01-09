@@ -1,0 +1,87 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "windows 10",
+        "height": 12,
+        "position": "left",
+        "padding": {
+            "top": 1,
+            "bottom": 1
+        }
+    },
+    "display": {
+        "separator": "  "
+    },
+    "modules": [
+        {
+            "type": "custom",
+            "key": "╭────────────────────────────────────────────────────────╮",
+            "keyColor": "blue",
+            "padding": {
+                "bottom": 2
+            }
+        },
+        "break",
+        "title",
+        {
+            "type": "custom",
+            "key": "OS",
+            "keyColor": "blue",
+            "format": "Windows 10"
+        },
+        {
+            "type": "custom",
+            "key": "Kernel",
+            "keyColor": "blue",
+            "format": "Windows NT"
+        },
+        {
+            "type": "packages",
+            "keyColor": "blue",
+            "format": "{} (winget)"
+        },
+        {
+            "type": "uptime",
+            "format": "{2}h {3}m",
+            "keyColor": "blue"
+        },
+        {
+            "type": "disk",
+            "key": "OS Age",
+            "folders": "/",
+            "keyColor": "blue",
+            "format": "{days} days {hours} hours {minutes} minutes"
+        },
+        {
+            "type": "custom",
+            "key": "DE",
+            "keyColor": "blue",
+            "format": "Windows Desktop"
+        },
+        {
+            "type": "de",
+            "keyColor": "blue"
+        },
+        {
+            "type": "memory",
+            "keyColor": "blue"
+        },
+        {
+            "type": "cpu",
+            "keyColor": "blue"
+        },
+        {
+            "type": "gpu",
+            "keyColor": "blue"
+        },
+        "break",
+        {
+            "type": "custom",
+            "key": "╰──────────────────────────────────────────────────────────╯",
+            "keyColor": "blue",
+            "padding": {
+                "top": 2
+            }
+        }
+    ]
+}
