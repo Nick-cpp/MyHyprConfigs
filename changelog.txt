@@ -55,3 +55,5 @@ Fixed eye.sh text formating
 2026.01.08-10
 Changed fish greeting
 Update power menu for artix
+2026.01.10~14
+Use pkill -15 -x for closing hyprland now
