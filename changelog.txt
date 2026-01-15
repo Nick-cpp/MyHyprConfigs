@@ -58,3 +58,5 @@ Update power menu for artix
 2026.01.10~14
 Use pkill -15 -x for closing hyprland now
 I have no more ideas what do i do
+2026.01.15
+Fixed power menu after wofi update
