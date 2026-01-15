@@ -1,9 +1,9 @@
 #!/bin/bash
 
-query=$(wofi --show dmenu -p "Wiki Search:" --width 250 --height 50)
+query=$(wofi --show dmenu -p "Wiki Search:" --width 250 --height 70)
 
 if [[ -n "$query" ]]; then
-    target=$(echo -e "Arch Wiki\nArtix Wiki" | wofi --show dmenu -i -p "Select Source:" --width 250 --height 100)
+    target=$(echo -e "Arch Wiki\nArtix Wiki" | wofi --show dmenu -i -p "Select Source:" --width 250 --height 130)
 
     if [[ -z "$target" ]]; then
         exit 0
