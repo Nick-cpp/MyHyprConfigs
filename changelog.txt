@@ -63,3 +63,5 @@ Fixed power menu after wofi update
 Fixed wofi-search after wofi update
 Fixed wofi config after wofi update
 I hate this update
+2026.01.19
+Resized wofi app launcher
