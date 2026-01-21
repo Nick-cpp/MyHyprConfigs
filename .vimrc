@@ -29,6 +29,9 @@ call plug#end()
 highlight SyntasticError cterm=underline ctermfg=red
 highlight SyntasticWarning cterm=underline ctermfg=yellow
 
+highlight Pmenu ctermbg=black ctermfg=white guibg=#000000 guifg=#ffffff
+highlight PmenuSel ctermbg=blue ctermfg=black guibg=#0000ff guifg=#000000
+
 let g:syntastic_enable_signs = 0
 let g:syntastic_enable_highlighting = 1
 let g:NERDCreateDefaultMappings = 1
