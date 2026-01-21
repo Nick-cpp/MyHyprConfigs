@@ -65,3 +65,6 @@ Fixed wofi config after wofi update
 I hate this update
 2026.01.19
 Resized wofi app launcher
+2026.01.21
+Fixed fastfetch boarders
+New vim color settings ( autocomplete menus )
