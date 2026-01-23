@@ -70,3 +70,5 @@ Fixed fastfetch borders
 New vim color settings ( autocomplete menus )
 2026.01.22
 Vim autocompletion on tab and shift tab to move to previous variant
+2026.01.23
+Fixed flash drives auto mounting
