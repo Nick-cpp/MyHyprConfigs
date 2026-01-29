@@ -72,3 +72,5 @@ New vim color settings ( autocomplete menus )
 Vim autocompletion on tab and shift tab to move to previous variant
 2026.01.23
 Fixed flash drives auto mounting
+2026.01.29
+Fixed waybar clock
