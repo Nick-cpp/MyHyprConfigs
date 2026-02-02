@@ -6,7 +6,7 @@ udiskie cmus libmad waybar mako ttf-space-mono-nerd wofi thunar ttf-font-awesome
 
 cbonsai ( AUR )
 
-<img width="1917" height="1080" alt="image" src="https://github.com/user-attachments/assets/55c277b7-517d-46b5-8d5c-781dceab52c4" />
+<img width="1918" height="1080" alt="image" src="https://github.com/user-attachments/assets/20a18f00-9bc6-441d-a9b6-62e8c344be00" />
 
 <img width="1913" height="1080" alt="image" src="https://github.com/user-attachments/assets/e141da11-cfe8-40ae-956a-ba0fb13ab8d2" />
 
