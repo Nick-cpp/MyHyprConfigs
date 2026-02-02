@@ -74,3 +74,6 @@ Vim autocompletion on tab and shift tab to move to previous variant
 Fixed flash drives auto mounting
 2026.01.29
 Fixed waybar clock
+2026.02.02
+Added wofi gesture
+moved autostart to ~/.config/hypr/autostart.conf
