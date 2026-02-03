@@ -76,4 +76,5 @@ Fixed flash drives auto mounting
 Fixed waybar clock
 2026.02.02
 Added wofi gesture
-moved autostart to ~/.config/hypr/autostart.conf
+2026.02.02-03
+Split hyprland configuration in 3 files
