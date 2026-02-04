@@ -10,7 +10,7 @@ cbonsai ( AUR )
 
 <img width="1918" height="1080" alt="image" src="https://github.com/user-attachments/assets/d7f2240a-634f-42ed-a16a-3cd4b97bcc08" />
 
-<img width="1909" height="1080" alt="image" src="https://github.com/user-attachments/assets/5ff49012-7c04-4e69-953e-2330e9730450" />
+<img width="1916" height="1080" alt="image" src="https://github.com/user-attachments/assets/75b692e5-d8e2-4898-84cb-db69a126f682" />
 
 <img width="1917" height="1080" alt="image" src="https://github.com/user-attachments/assets/35c0136a-9d0b-49fa-89f7-2b35006cfb20" />
 
