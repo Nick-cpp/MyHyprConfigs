@@ -2,7 +2,7 @@
 
 Packages
 
-udiskie cmus libmad waybar mako ttf-space-mono-nerd wofi thunar ttf-font-awesome otf-font-awesome ttf-jetbrains-mono fish pkgfile ttf-dejavu inetutils fastfetch pavucontrol hyprshot hyprlock micro gvfs gvfs-afc gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb udisks2 swww hyprpicker
+udiskie cmus libmad waybar mako ttf-space-mono-nerd wofi thunar ttf-font-awesome otf-font-awesome ttf-jetbrains-mono fish pkgfile ttf-dejavu inetutils fastfetch pavucontrol hyprshot hyprlock micro gvfs gvfs-afc gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb udisks2 swww hyprpicker foot
 
 cbonsai ( AUR )
 
