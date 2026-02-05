@@ -8,87 +8,53 @@ LONG_BREAK_COUNT=0
 
 for arg in "$@"; do
     case $arg in
-        --interval=*)
-            INTERVAL="${arg#*=}"
-            ;;
-        --duration=*)
-            DURATION="${arg#*=}"
-            ;;
+        --interval=*) INTERVAL="${arg#*=}" ;;
+        --duration=*) DURATION="${arg#*=}" ;;
     esac
 done
 
-format_time() {
-    local seconds=$1
-    local mins=$((seconds / 60))
-    local secs=$((seconds % 60))
-    printf "%02d:%02d" $mins $secs
+spawn_break_window() {
+    local title="$1"
+    local time=$2
+    local color=$3
+
+    foot --app-id "eye-break" --title "$title" \
+        -o "pad=18x10" \
+        -e bash -c "
+            printf \"\033[1;${color}m\"
+            echo \"========================\"
+            echo \"    $title\"
+            echo \"========================\"
+            printf \"\033[0m\"
+            echo \"Rest for $time seconds\"
+            echo \"\"
+            for i in \$(seq $time -1 1); do
+                mins=\$((i/60))
+                secs=\$((i%60))
+                printf \"\rTime left: %02d:%02d\e[K\" \$mins \$secs
+                sleep 1
+            done
+            printf \"\rDone!\e[K\"
+            sleep 0.5
+        " > /dev/null 2>&1
 }
 
 while true; do
-    sleep $((INTERVAL * 60))
-    
+    [ "$INTERVAL" -gt 0 ] && sleep $((INTERVAL * 60)) || sleep 1
     touch "$LOCK_FILE"
     
     if [ $SHORT_BREAK_COUNT -lt 2 ]; then
-        hyprctl dispatch exec "[float; size 325 200; center] kitty --title 'Eye Break' --class=eye-break -e bash -c '
-            printf \"\033[1;31m\"
-            echo \"========================\"
-            echo \"     EYE BREAK TIME!\"
-            echo \"========================\"
-            printf \"\033[0m\"
-            echo \"Look away for $DURATION seconds\"
-            echo \"\"
-            for i in {$DURATION..1}; do
-                formatted_time=\$(printf \"%02d:%02d\" \$((i/60)) \$((i%60)))
-                echo -ne \"\\\rTime left: \$formatted_time\"
-                sleep 1
-            done
-            exit 0
-        '"
+        spawn_break_window "EYE BREAK TIME!" "$DURATION" "31"
         SHORT_BREAK_COUNT=$((SHORT_BREAK_COUNT + 1))
-        rm -f "$LOCK_FILE"
-        sleep $DURATION
     else
         SHORT_BREAK_COUNT=0
-        
         if [ $LONG_BREAK_COUNT -eq 0 ]; then
-            hyprctl dispatch exec "[float; size 325 200; center] kitty --title 'Long Eye Break' --class=eye-break -e bash -c '
-                printf \"\033[1;32m\"
-                echo \"========================\"
-                echo \"    LONG BREAK TIME!\"
-                echo \"========================\"
-                printf \"\033[0m\"
-                echo \"Look away for 5 minutes\"
-                echo \"\"
-                for i in {300..1}; do
-                    formatted_time=\$(printf \"%02d:%02d\" \$((i/60)) \$((i%60)))
-                    echo -ne \"\\\rTime left: \$formatted_time\"
-                    sleep 1
-                done
-                exit 0
-            '"
+            spawn_break_window "LONG BREAK TIME!" 300 "32"
             LONG_BREAK_COUNT=1
-            rm -f "$LOCK_FILE"
-            sleep 300
         else
-            hyprctl dispatch exec "[float; size 325 200; center] kitty --title 'Extra Long Eye Break' --class=eye-break -e bash -c '
-                printf \"\033[1;34m\"
-                echo \"========================\"
-                echo \" EXTRA LONG BREAK TIME!\"
-                echo \"========================\"
-                printf \"\033[0m\"
-                echo \"Look away for 10 minutes\"
-                echo \"\"
-                for i in {600..1}; do
-                    formatted_time=\$(printf \"%02d:%02d\" \$((i/60)) \$((i%60)))
-                    echo -ne \"\\\rTime left: \$formatted_time\"
-                    sleep 1
-                done
-                exit 0
-            '"
+            spawn_break_window "EXTRA LONG BREAK TIME!" 600 "34"
             LONG_BREAK_COUNT=0
-            rm -f "$LOCK_FILE"
-            sleep 600
         fi
     fi
+    rm -f "$LOCK_FILE"
 done
