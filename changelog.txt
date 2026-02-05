@@ -82,3 +82,5 @@ Split hyprland configuration in 3 files
 Im going to move to foot terminal
 im making a config for it now
 Added cmus config
+2026.02.05
+Finaly moved to foot terminal
