@@ -6,7 +6,7 @@ alias sp="sudo pacman"
 alias g="git"
 alias c="clear"
 alias fucking="sudo"
-alias wmconf="vim ~/.config/hypr/hyprland.conf"
+alias wmconf="vim ~/.config/hypr/"
 alias plant="cbonsai"
 
 if status is-interactive
@@ -21,4 +21,8 @@ function fish_prompt
     set -l normal (set_color normal)
 
     echo -n -s $normal " " $cyan (prompt_pwd) $magenta " ➜ " $normal
+end
+
+function on_exit --on-event fish_exit
+    printf "\e[?25l"
 end
