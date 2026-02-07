@@ -84,3 +84,6 @@ im making a config for it now
 Added cmus config
 2026.02.05
 Finaly moved to foot terminal
+2026.02.07
+Added greetings to fish shell
+Fixed "extra long break time" formatting
