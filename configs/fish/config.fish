@@ -13,6 +13,7 @@ if status is-interactive
     set phrases \
         "Linux is not a kernel, it's a way of life." \
         "Touch grass? I prefer touch /dev/random." \
+        "My RAM, my rules." \
         "You should touch some grass."
 
     set random_index (random 1 (count $phrases))
