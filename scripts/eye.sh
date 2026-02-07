@@ -23,7 +23,7 @@ spawn_break_window() {
         -e bash -c "
             printf \"\033[1;${color}m\"
             echo \"========================\"
-            echo \"    $title\"
+            echo \"$title\"
             echo \"========================\"
             printf \"\033[0m\"
             echo \"Rest for $time seconds\"
@@ -44,15 +44,15 @@ while true; do
     touch "$LOCK_FILE"
     
     if [ $SHORT_BREAK_COUNT -lt 2 ]; then
-        spawn_break_window "EYE BREAK TIME!" "$DURATION" "31"
+        spawn_break_window "    EYE BREAK TIME!" "$DURATION" "31"
         SHORT_BREAK_COUNT=$((SHORT_BREAK_COUNT + 1))
     else
         SHORT_BREAK_COUNT=0
         if [ $LONG_BREAK_COUNT -eq 0 ]; then
-            spawn_break_window "LONG BREAK TIME!" 300 "32"
+            spawn_break_window "    LONG BREAK TIME!" 300 "32"
             LONG_BREAK_COUNT=1
         else
-            spawn_break_window "EXTRA LONG BREAK TIME!" 600 "34"
+            spawn_break_window " EXTRA LONG BREAK TIME!" 600 "34"
             LONG_BREAK_COUNT=0
         fi
     fi
