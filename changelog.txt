@@ -87,3 +87,5 @@ Finaly moved to foot terminal
 2026.02.07
 Added greetings to fish shell
 Fixed "extra long break time" formatting
+2026.02.13
+Added years counting to fastfetch OS age
