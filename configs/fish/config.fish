@@ -8,7 +8,7 @@ alias c="clear"
 alias fucking="sudo"
 alias wmconf="vim ~/.config/hypr/"
 alias plant="cbonsai"
-alias wifi="sudo impala"
+alias wifi="impala"
 
 if status is-interactive
     set phrases \
