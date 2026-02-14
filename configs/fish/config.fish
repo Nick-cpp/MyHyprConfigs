@@ -8,13 +8,15 @@ alias c="clear"
 alias fucking="sudo"
 alias wmconf="vim ~/.config/hypr/"
 alias plant="cbonsai"
+alias wifi="sudo impala"
 
 if status is-interactive
     set phrases \
         "Linux is not a kernel, it's a way of life." \
         "Touch grass? I prefer touch /dev/random." \
         "My RAM, my rules." \
-        "You should touch some grass."
+        "You should touch some grass." \
+        "Your kernel is $(uname -sr)"
 
     set random_index (random 1 (count $phrases))
 
