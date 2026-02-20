@@ -89,3 +89,5 @@ Added greetings to fish shell
 Fixed "extra long break time" formatting
 2026.02.13
 Added years counting to fastfetch OS age
+2026.02.20
+Now clicking on keyboard layout on waybar will change it
