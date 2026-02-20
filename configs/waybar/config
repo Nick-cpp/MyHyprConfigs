@@ -46,7 +46,7 @@
   },
   "hyprland/language": {
     "format": "{}",
-    "on-click": "hyprctl switchxkblayout next"
+    "on-click": "hyprctl switchxkblayout by-tech-gaming-keyboard next"
   },
   "clock": {
     "format": "{:%H:%M}",
