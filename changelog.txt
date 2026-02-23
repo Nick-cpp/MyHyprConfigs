@@ -91,3 +91,5 @@ Fixed "extra long break time" formatting
 Added years counting to fastfetch OS age
 2026.02.20
 Now clicking on keyboard layout on waybar will change it
+2026.02.23
+Added bindings to toggle opacity ( win shift b and win shift n )
