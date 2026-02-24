@@ -11,18 +11,6 @@ alias plant="cbonsai"
 alias wifi="impala"
 
 if status is-interactive
-    set phrases \
-        "Linux is not a kernel, it's a way of life." \
-        "Touch grass? I prefer touch /dev/random." \
-        "My RAM, my rules." \
-        "You should touch some grass." \
-        "Your kernel is $(uname -sr)"
-
-    set random_index (random 1 (count $phrases))
-
-    set_color cyan
-    echo -e "\e[3m$phrases[$random_index]\e[0m"
-    set_color normal
 end
 set -U fish_greeting
 function super
