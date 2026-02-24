@@ -96,3 +96,4 @@ Added bindings to toggle opacity ( win shift b and win shift n )
 2026.02.24
 Added Gentoo wallpaper
 ( Im going to use Gentoo soon btw )
+Removed fish greetings
