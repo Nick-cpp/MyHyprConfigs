@@ -93,3 +93,6 @@ Added years counting to fastfetch OS age
 Now clicking on keyboard layout on waybar will change it
 2026.02.23
 Added bindings to toggle opacity ( win shift b and win shift n )
+2026.02.24
+Added Gentoo wallpaper
+( Im going to use Gentoo soon btw )
