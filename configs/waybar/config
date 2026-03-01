@@ -28,7 +28,7 @@
     }
   },
   "custom/arch": {
-    "format": "\uf31f ",
+    "format": "\uf30d ",
     "tooltip-format": "btw",
     "on-click": "pgrep -x wofi && pkill wofi || wofi --show drun -I"
   },
@@ -40,7 +40,7 @@
     },
     "sort-by-number": true,
     "persistent-workspaces": {
-      "eDP-1": [1, 2, 3, 4],
+      "eDP-2": [1, 2, 3, 4],
       "HDMI-A-1": [5, 6, 7, 8]
     }
   },
@@ -86,7 +86,7 @@
     "format-bluetooth-muted": " {icon} {format_source}",
     "format-muted": " {format_source}",
     "format-icons": {
-      "headphone": "",
+      "headphone": "\udb80\udecb",
       "hands-free": "",
       "headset": "",
       "phone": "",
