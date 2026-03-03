@@ -9,6 +9,7 @@ alias fucking="sudo"
 alias wmconf="vim ~/.config/hypr/"
 alias plant="cbonsai"
 alias wifi="impala"
+alias dv="doas vim"
 
 if status is-interactive
 end
@@ -21,7 +22,7 @@ function fish_prompt
     set -l blue (set_color blue)
     set -l normal (set_color normal)
 
-    echo -n -s $normal " " $cyan (prompt_pwd) $magenta " ➜ " $normal
+    echo -n -s $normal " " $cyan (prompt_pwd) $blue " ➜ " $normal
 end
 
 function on_exit --on-event fish_exit
