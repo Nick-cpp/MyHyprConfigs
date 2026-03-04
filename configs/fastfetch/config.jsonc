@@ -1,78 +1,101 @@
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
-      "source": "gentoo",
-      "height": 12,
-      "position": "left",
-      "padding": {
-        "top": 1,
-        "bottom": 1
-    }
-  },
-    "display": {
-        "separator": "  "
+        "padding": {
+            "left": 1,
+            "top": 2
+        }
     },
     "modules": [
+        "break",
         {
             "type": "custom",
-            "key": "-----------------------------------------------------------",
-            "padding": {
-                "bottom": 2
-            }
-        },
-        "break",
-        "title",
-        {
-            "type": "os",
-            "keyColor": "magenta"
+            "format": "\u001b[90m┌──────────────────────Hardware──────────────────────┐"
         },
         {
-            "type": "kernel",
-            "keyColor": "magenta"
-        },
-        {
-            "type": "packages",
-            "keyColor": "magenta"
-        },
-        {
-            "type": "uptime",
-            "format": "{2}h {3}m",
-            "keyColor": "magenta"
-        },
-        {
-            "type": "disk",
-            "key": "OS Age",
-            "folders": "/",
-            "keyColor": "magenta",
-            "format": "{years} years {days} days {hours} hours {minutes} minutes"
-        },
-        {
-            "type": "wm",
-            "keyColor": "magenta"
-        },
-        {
-            "type": "de",
-            "keyColor": "magenta"
-        },
-        {
-            "type": "memory",
-            "keyColor": "magenta"
+            "type": "host",
+            "key": "PC:"
         },
         {
             "type": "cpu",
-            "keyColor": "magenta"
+            "key": "│ ├"
         },
         {
             "type": "gpu",
-            "keyColor": "magenta"
+            "key": "│ ├"
+        },
+        {
+            "type": "memory",
+            "key": "│ ├"
+        },
+        {
+            "type": "disk",
+            "key": "└ └"
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
         },
         "break",
         {
             "type": "custom",
-            "key": "-----------------------------------------------------------",
-            "padding": {
-                "top": 2
-            }
+            "format": "\u001b[90m┌──────────────────────Software──────────────────────┐"
+        },
+        {
+            "type": "os",
+            "key": "OS"
+        },
+        {
+            "type": "kernel",
+            "key": "│ ├"
+        },
+        {
+            "type": "packages",
+            "key": "│ ├"
+        },
+        {
+            "type": "shell",
+            "key": "└ └"
+        },
+        "break",
+        {
+            "type": "wm",
+            "key": "WM"
+        },
+        {
+            "type": "terminal",
+            "key": "└ └"
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+        },
+        "break",
+        {
+            "type": "custom",
+            "format": "\u001b[90m┌─────────────────Uptime / Age / DT──────────────────┐"
+        },
+        {
+            "type": "command",
+            "key": "  OS Age ",
+            "text": "birth_install=$(stat -c %W /); current_time=$(date +%s); diff=$((current_time - birth_install)); years=$((diff / 31536000)); days=$(( (diff % 31536000) / 86400 )); hours=$(( (diff % 86400) / 3600 )); minutes=$(( (diff % 3600) / 60 )); echo \"$years years $days days $hours hours $minutes minutes\""
+        },
+        {
+            "type": "uptime",
+            "key": "  Uptime "
+        },
+        {
+            "type": "datetime",
+            "key": "  DateTime "
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+        },
+        {
+            "type": "colors",
+            "paddingLeft": 2,
+            "symbol": "circle"
         }
     ]
 }
