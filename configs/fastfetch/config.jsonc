@@ -14,7 +14,7 @@
         },
         {
             "type": "host",
-            "key": "PC:"
+            "key": "PC"
         },
         {
             "type": "cpu",
@@ -76,9 +76,10 @@
             "format": "\u001b[90m┌─────────────────Uptime / Age / DT──────────────────┐"
         },
         {
-            "type": "command",
-            "key": "  OS Age ",
-            "text": "birth_install=$(stat -c %W /); current_time=$(date +%s); diff=$((current_time - birth_install)); years=$((diff / 31536000)); days=$(( (diff % 31536000) / 86400 )); hours=$(( (diff % 86400) / 3600 )); minutes=$(( (diff % 3600) / 60 )); echo \"$years years $days days $hours hours $minutes minutes\""
+            "type": "disk",
+            "key": "  OS Age",
+            "folders": "/",
+            "format": "{years} years {days} days {hours} hours {minutes} minutes"
         },
         {
             "type": "uptime",
