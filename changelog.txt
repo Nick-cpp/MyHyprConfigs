@@ -100,3 +100,5 @@ Removed fish greetings
 2026.03.01
 Updated pavucontrol windowrule
 I use Gentoo btw
+2026.03.07
+Added windowrule fot thunar progress window
