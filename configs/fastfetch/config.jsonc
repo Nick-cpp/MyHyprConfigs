@@ -26,10 +26,6 @@
         },
         {
             "type": "memory",
-            "key": "│ ├"
-        },
-        {
-            "type": "disk",
             "key": "└ └"
         },
         {
