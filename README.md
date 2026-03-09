@@ -1,10 +1,10 @@
 **Don't copy theese configs before editing!!!**
+**Install.sh is no more installation script! Now is more like guide for installation**
 
 Packages
 
-udiskie cmus libmad waybar mako ttf-space-mono-nerd wofi thunar ttf-font-awesome otf-font-awesome ttf-jetbrains-mono fish pkgfile ttf-dejavu inetutils fastfetch pavucontrol hyprshot hyprlock micro gvfs gvfs-afc gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb udisks2 swww hyprpicker foot
+udiskie cmus libmad waybar mako ttf-space-mono-nerd wofi thunar ttf-font-awesome otf-font-awesome ttf-jetbrains-mono fish pkgfile ttf-dejavu inetutils fastfetch pavucontrol hyprshot hyprlock micro gvfs gvfs-afc gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb udisks2 swww hyprpicker foot cbonsai
 
-cbonsai ( AUR )
 
 <img width="1918" height="1080" alt="image" src="https://github.com/user-attachments/assets/1686ea50-330c-4b8a-a08d-64d2fb8dbe24" />
 
