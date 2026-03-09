@@ -7,7 +7,7 @@ udiskie cmus libmad waybar mako ttf-space-mono-nerd wofi thunar ttf-font-awesome
 
 <img width="1916" height="1080" alt="image" src="https://github.com/user-attachments/assets/12c04d93-d1c6-4075-8c4d-3526b3154392" />
 
-<img width="1918" height="1080" alt="image" src="https://github.com/user-attachments/assets/d7f2240a-634f-42ed-a16a-3cd4b97bcc08" />
+<img width="1918" height="1080" alt="image" src="https://github.com/user-attachments/assets/19f0d173-123c-4375-a9df-a75979e0fe69" />
 
 <img width="1916" height="1080" alt="image" src="https://github.com/user-attachments/assets/75b692e5-d8e2-4898-84cb-db69a126f682" />
 
