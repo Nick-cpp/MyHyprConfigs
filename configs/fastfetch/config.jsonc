@@ -1,98 +1,77 @@
+// Inspired by Catnap
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
+        "type": "small",
         "padding": {
-            "left": 1,
-            "top": 2
+            "top": 1
         }
     },
+    "display": {
+        "separator": " "
+    },
     "modules": [
-        "break",
         {
-            "type": "custom",
-            "format": "\u001b[90m┌──────────────────────Hardware──────────────────────┐"
+            "key": "╭───────────╮",
+            "type": "custom"
         },
         {
-            "type": "host",
-            "key": "PC"
+            "key": "│ {#31} user    {#keys}│",
+            "type": "title",
+            "format": "{user-name}"
         },
         {
-            "type": "cpu",
-            "key": "│ ├"
+            "key": "│ {#32}󰇅 hname   {#keys}│",
+            "type": "title",
+            "format": "{host-name}"
         },
         {
-            "type": "gpu",
-            "key": "│ ├"
-        },
-        {
-            "type": "memory",
-            "key": "└ └"
-        },
-        {
-            "type": "custom",
-            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
-        },
-        "break",
-        {
-            "type": "custom",
-            "format": "\u001b[90m┌──────────────────────Software──────────────────────┐"
-        },
-        {
-            "type": "os",
-            "key": "OS"
-        },
-        {
-            "type": "kernel",
-            "key": "│ ├"
-        },
-        {
-            "type": "packages",
-            "key": "│ ├"
-        },
-        {
-            "type": "shell",
-            "key": "└ └"
-        },
-        "break",
-        {
-            "type": "wm",
-            "key": "WM"
-        },
-        {
-            "type": "terminal",
-            "key": "└ └"
-        },
-        {
-            "type": "custom",
-            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
-        },
-        "break",
-        {
-            "type": "custom",
-            "format": "\u001b[90m┌─────────────────Uptime / Age / DT──────────────────┐"
-        },
-        {
+            "key": "│ {#33}󰅐 age     {#keys}│",
             "type": "disk",
-            "key": "  OS Age",
             "folders": "/",
-            "format": "{years} years {days} days {hours} hours {minutes} minutes"
+            "format": "{years} y {days} d {hours} h {minutes} m"
         },
         {
-            "type": "uptime",
-            "key": "  Uptime "
+            "key": "│ {#34}{icon} distro  {#keys}│",
+            "type": "os"
         },
         {
-            "type": "datetime",
-            "key": "  DateTime "
+            "key": "│ {#35} kernel  {#keys}│",
+            "type": "kernel"
         },
         {
-            "type": "custom",
-            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+            "key": "│ {#36}󰇄 desktop {#keys}│",
+            "type": "de"
         },
         {
+            "key": "│ {#31} term    {#keys}│",
+            "type": "terminal"
+        },
+        {
+            "key": "│ {#32} shell   {#keys}│",
+            "type": "shell"
+        },
+        {
+            "key": "│ {#34}󰉉 disk    {#keys}│",
+            "type": "disk",
+            "folders": "/"
+        },
+        {
+            "key": "│ {#35} memory  {#keys}│",
+            "type": "memory"
+        },
+        {
+            "key": "├───────────┤",
+            "type": "custom"
+        },
+        {
+            "key": "│ {#39} colors  {#keys}│",
             "type": "colors",
-            "paddingLeft": 2,
             "symbol": "circle"
+        },
+        {
+            "key": "╰───────────╯",
+            "type": "custom"
         }
     ]
 }
