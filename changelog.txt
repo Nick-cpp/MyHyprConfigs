@@ -104,3 +104,4 @@ I use Gentoo btw
 Added windowrule fot thunar progress window
 2026.03.09
 No more arch-compatibility
+Upgraded fastfetch
