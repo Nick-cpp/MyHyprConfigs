@@ -26,26 +26,22 @@
             "format": "{host-name}"
         },
         {
+            "key": "│ {#34}{icon} distro  {#keys}│",
+            "type": "os"
+        },
+        {
+            "key": "│ {#34}󰏖 pkgs    {#keys}│",
+            "type": "packages"
+        },
+        {
             "key": "│ {#33}󰅐 age     {#keys}│",
             "type": "disk",
             "folders": "/",
             "format": "{years} y {days} d {hours} h {minutes} m"
         },
         {
-            "key": "│ {#34}{icon} distro  {#keys}│",
-            "type": "os"
-        },
-        {
             "key": "│ {#35} kernel  {#keys}│",
             "type": "kernel"
-        },
-        {
-            "key": "│ {#36}󰇄 desktop {#keys}│",
-            "type": "de"
-        },
-        {
-            "key": "│ {#34}󰏖 pkgs    {#keys}│",
-            "type": "packages"
         },
         {
             "key": "│ {#35} memory  {#keys}│",
