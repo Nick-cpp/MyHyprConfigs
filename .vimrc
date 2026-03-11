@@ -6,6 +6,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set relativenumber
+set number
 set clipboard=unnamedplus
 set so=30
 set incsearch
@@ -46,15 +47,3 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-
-function! SmartTab()
-  let col = col('.') - 1
-  if !col || getline('.')[col - 1] =~ '\s'
-    return "\<Tab>"
-  else
-    return "\<C-n>"
-  endif
-endfunction
-
-inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : SmartTab()
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
