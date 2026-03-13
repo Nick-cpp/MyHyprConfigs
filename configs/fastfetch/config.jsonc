@@ -16,35 +16,39 @@
             "type": "custom"
         },
         {
-            "key": "│ {#31} user    {#keys}│",
+            "key": "│  user    {#keys}│",
             "type": "title",
             "format": "{user-name}"
         },
         {
-            "key": "│ {#32}󰇅 hname   {#keys}│",
+            "key": "│ 󰇅 hname   {#keys}│",
             "type": "title",
             "format": "{host-name}"
         },
         {
-            "key": "│ {#34}{icon} distro  {#keys}│",
+            "key": "│ {icon} distro  {#keys}│",
             "type": "os"
         },
         {
-            "key": "│ {#34}󰏖 pkgs    {#keys}│",
+            "key": "│ 󰏖 pkgs    {#keys}│",
             "type": "packages"
         },
         {
-            "key": "│ {#33}󰅐 age     {#keys}│",
+            "key": "│ 󰅐 uptime  {#keys}│",
+            "type": "uptime"
+        },
+        {
+            "key": "│ 󱦟 age     {#keys}│",
             "type": "disk",
             "folders": "/",
             "format": "{years} y {days} d {hours} h {minutes} m"
         },
         {
-            "key": "│ {#35} kernel  {#keys}│",
+            "key": "│  kernel  {#keys}│",
             "type": "kernel"
         },
         {
-            "key": "│ {#35} memory  {#keys}│",
+            "key": "│  memory  {#keys}│",
             "type": "memory"
         },
         {
@@ -52,7 +56,7 @@
             "type": "custom"
         },
         {
-            "key": "│ {#39} colors  {#keys}│",
+            "key": "│  colors  {#keys}│",
             "type": "colors",
             "symbol": "circle"
         },
