@@ -2,10 +2,9 @@
 #### ALIASES ####
 #################
 
-alias sp="sudo pacman"
 alias g="git"
 alias c="clear"
-alias fucking="sudo"
+alias fucking="doas"
 alias wmconf="vim ~/.config/hypr/"
 alias plant="cbonsai"
 alias wifi="impala"
