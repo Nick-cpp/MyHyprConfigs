@@ -5,28 +5,7 @@ cd
 echo "Installing needed packages..."
 sleep 2
 sudo pacman -Syu foot udiskie cmus libmad mako ttf-space-mono-nerd unzip hyprpicker noto-fonts-emoji noto-fonts noto-fonts-cjk nwg-look gthumb haruna imagemagick base-devel hyprland waybar wofi thunar ttf-font-awesome otf-font-awesome ttf-jetbrains-mono fish pkgfile ttf-dejavu inetutils fastfetch pavucontrol hyprshot hyprlock gvfs gvfs-afc gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb udisks2 swww git
-sudo pacman -R vim
-
-echo "Compiling vim with system clipboard enabled..."
-sleep 2
-git clone https://github.com/vim/vim.git
-cd vim
-./configure \
-    --with-features=huge \
-    --enable-multibyte \
-    --enable-python3interp=yes \
-    --with-python3-command=python \
-    --enable-cscope \
-    --enable-terminal \
-    --enable-autoservername \
-    --enable-fontset \
-    --with-wayland \
-    --enable-gui=no \
-    --with-x=no
-
-make -j$(nproc)
-sudo make install
-cd
+doas emerge --unmerge vim
 
 echo "Installing vim plug..."
 sleep 2
@@ -45,23 +24,13 @@ echo "Copying wallpapers to ~/Pictures/Wallpapers/..."
 sleep 2
 cp ~/MyHyprConfigs/Wallpapers/* ~/Pictures/Wallpapers/
 
-echo ""
-echo "Are you using Artix Linux? (Needs elogind)"
-read -p "Enter 'yes' or 'no': " use_artix
-
 echo "Copying scripts to ~/.scripts/..."
 sleep 2
 mkdir -p ~/.scripts/
 
 cp ~/MyHyprConfigs/scripts/* ~/.scripts/
 
-if [[ "$use_artix" =~ ^[Yy][Ee][Ss]$|^[Yy]$ ]]; then
-    echo "Using Artix version of power menu (loginctl)..."
-    cp ~/MyHyprConfigs/scripts/power-menu-artix.sh ~/.scripts/power-menu.sh
-else
-    echo "Using standard version of power menu (reboot/poweroff)..."
-    cp ~/MyHyprConfigs/scripts/power-menu.sh ~/.scripts/power-menu.sh
-fi
+cp ~/MyHyprConfigs/scripts/power-menu.sh ~/.scripts/power-menu.sh
 
 chmod +x ~/.scripts/*
 
@@ -71,18 +40,13 @@ unzip ~/MyHyprConfigs/Moga-Candy-Black.zip
 
 echo "Copying the cursor theme..."
 sleep 2
-mkdir -p ~/.local/share/icons/
-sudo cp -rf ~/Moga-Candy-Black/Moga-Candy-Black/ ~/.local/share/icons/
+mkdir -p ~/.icons/
+sudo cp -rf ~/Moga-Candy-Black/Moga-Candy-Black/ ~/.icons/
 
 echo "Copying configs..."
 sleep 2
 cp ~/MyHyprConfigs/.vimrc ~/.vimrc
 cp -rf ~/MyHyprConfigs/configs/* ~/.config/
-
-if [[ ! "$use_artix" =~ ^[Yy][Ee][Ss]$|^[Yy]$ ]]; then
-    echo "Copying Arch-specific waybar config..."
-    cp ~/MyHyprConfigs/waybar-arch/* ~/.config/waybar/
-fi
 
 echo ""
 echo "Installer has finished its work."
