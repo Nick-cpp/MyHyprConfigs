@@ -4,8 +4,14 @@ cd
 
 echo "Installing needed packages..."
 sleep 2
-sudo pacman -Syu foot udiskie cmus libmad mako ttf-space-mono-nerd unzip hyprpicker noto-fonts-emoji noto-fonts noto-fonts-cjk nwg-look gthumb haruna imagemagick base-devel hyprland waybar wofi thunar ttf-font-awesome otf-font-awesome ttf-jetbrains-mono fish pkgfile ttf-dejavu inetutils fastfetch pavucontrol hyprshot hyprlock gvfs gvfs-afc gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb udisks2 swww git
 doas emerge --unmerge vim
+doas pacman -Syu foot udiskie cmus mako unzip hyprpicker noto-fonts-emoji noto-fonts noto-fonts-cjk nwg-look gthumb spacefm hyprland waybar wofi ttf-font-awesome otf-font-awesome ttf-jetbrains-mono fish ttf-dejavu fastfetch pavucontrol hyprshot hyprlock git
+
+echo "USE-flags"
+echo "#------VIM------" | doas tee -a /etc/portage/package.use/main
+echo "app-editors/vim clipboard -X" | doas tee -a /etc/portage/package.use/main
+echo "#-----WAYBAR----" | doas tee -a /etc/portage/package.use/main
+echo "gui-apps/waybar network wifi tray pulseaudio" | doas tee -a /etc/portage/package.use/main
 
 echo "Installing vim plug..."
 sleep 2
@@ -41,7 +47,7 @@ unzip ~/MyHyprConfigs/Moga-Candy-Black.zip
 echo "Copying the cursor theme..."
 sleep 2
 mkdir -p ~/.icons/
-sudo cp -rf ~/Moga-Candy-Black/Moga-Candy-Black/ ~/.icons/
+doas cp -rf ~/Moga-Candy-Black/Moga-Candy-Black/ ~/.icons/
 
 echo "Copying configs..."
 sleep 2
@@ -54,7 +60,7 @@ read -p "Reboot? (y/n): " reboot_choice
 
 if [[ "$reboot_choice" =~ ^[Yy]$ ]]; then
     echo "Rebooting..."
-    sudo reboot
+    doas reboot
 else
     echo "Reboot skipped. Changes may require a restart to take effect."
 fi
