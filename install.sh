@@ -1,5 +1,6 @@
 #!/bin/bash
 #DO NOT USE THIS INSTALLATION SCRIPT IS WORK IN PROGRESS
+
 cd
 
 echo "Installing needed packages..."
@@ -8,10 +9,8 @@ doas emerge --unmerge vim
 doas pacman -Syu foot udiskie cmus mako unzip hyprpicker noto-fonts-emoji noto-fonts noto-fonts-cjk nwg-look gthumb spacefm hyprland waybar wofi ttf-font-awesome otf-font-awesome ttf-jetbrains-mono fish ttf-dejavu fastfetch pavucontrol hyprshot hyprlock git
 
 echo "USE-flags"
-echo "#------VIM------" | doas tee -a /etc/portage/package.use/main
-echo "app-editors/vim clipboard -X" | doas tee -a /etc/portage/package.use/main
-echo "#-----WAYBAR----" | doas tee -a /etc/portage/package.use/main
-echo "gui-apps/waybar network wifi tray pulseaudio" | doas tee -a /etc/portage/package.use/main
+doas cp ~/MyHyprConfigs/package.use/* /etc/portage/package.use/
+doas chown -R root /etc/portage/package.use/
 
 echo "Installing vim plug..."
 sleep 2
