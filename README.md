@@ -5,7 +5,7 @@
 
 Packages
 
-udiskie cmus libmad waybar mako ttf-space-mono-nerd wofi spacefm ttf-font-awesome otf-font-awesome ttf-jetbrains-mono fish pkgfile ttf-dejavu inetutils fastfetch pavucontrol hyprshot hyprlock gvfs gvfs-afc gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb udisks2 swww hyprpicker foot cbonsai celluloid
+foot udiskie cmus mako unzip hyprpicker noto-fonts-emoji noto-fonts noto-fonts-cjk nwg-look gthumb spacefm hyprland waybar wofi ttf-font-awesome otf-font-awesome ttf-jetbrains-mono fish ttf-dejavu fastfetch pavucontrol hyprshot hyprlock git
 
 <img width="1916" height="1080" alt="image" src="https://github.com/user-attachments/assets/12c04d93-d1c6-4075-8c4d-3526b3154392" />
 
