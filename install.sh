@@ -17,6 +17,8 @@ echo "[General]" | doas tee /etc/iwd/main.conf
 echo "EnableNetworkConfiguration=true" | doas tee -a /etc/iwd/main.conf
 echo "[Network]" | doas tee -a /etc/iwd/main.conf
 echo "NameResolvingService=resolvconf" | doas tee -a /etc/iwd/main.conf
+echo "nameserver 8.8.8.8" | doas tee /etc/iwd/resolv.conf
+echo "nameserver 8.8.4.4" | doas tee -a /etc/resolv.conf
 
 echo "Installing vim plug..."
 sleep 2
