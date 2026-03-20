@@ -12,6 +12,12 @@ echo "USE-flags"
 doas cp ~/MyHyprConfigs/package.use/* /etc/portage/package.use/
 doas chown -R root /etc/portage/package.use/
 
+doas mkdir -p /etc/iwd
+echo "[General]" | doas tee /etc/iwd/main.conf
+echo "EnableNetworkConfiguration=true" | doas tee -a /etc/iwd/main.conf
+echo "[Network]" | doas tee -a /etc/iwd/main.conf
+echo "NameResolvingService=resolvconf" | doas tee -a /etc/iwd/main.conf
+
 echo "Installing vim plug..."
 sleep 2
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
