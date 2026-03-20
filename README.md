@@ -1,5 +1,6 @@
 **Don't copy theese configs before editing!!!**
 **Install.sh is no more installation script! Now is more like guide for installation**
+**Working on installation script for gentoo**
 
 Packages
 
