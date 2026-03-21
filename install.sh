@@ -3,14 +3,19 @@
 
 cd
 
-echo "Installing needed packages..."
-sleep 2
-doas emerge --unmerge vim
-doas pacman -Syu foot udiskie cmus mako unzip hyprpicker noto-fonts-emoji noto-fonts noto-fonts-cjk nwg-look gthumb spacefm hyprland waybar wofi ttf-font-awesome otf-font-awesome ttf-jetbrains-mono fish ttf-dejavu fastfetch pavucontrol hyprshot hyprlock git
+echo "Enabling needed overlays"
+doas eselect repository enable guru
+doas eselect repository enable hyproverlay
+doas emerge --sync
 
 echo "USE-flags"
 doas cp ~/MyHyprConfigs/package.use/* /etc/portage/package.use/
 doas chown -R root /etc/portage/package.use/
+
+echo "Installing needed packages..."
+sleep 2
+doas emerge --unmerge vim
+doas emerge gui-apps/foot sys-fs/udiskie media-sound/cmus gui-apps/mako app-arch/unzip gui-apps/hyprpicker media-fonts/noto-emoji media-fonts/noto media-fonts/noto-cjk app-misc/nwg-look media-gfx/gthumb x11-misc/spacefm gui-apps/waybar gui-apps/wofi media-fonts/fontawesome media-fonts/jetbrains-mono app-shells/fish media-fonts/dejavu app-misc/fastfetch app-misc/neofetch media-sound/pavucontrol gui-apps/hyprshot gui-apps/hyprlock
 
 doas mkdir -p /etc/iwd
 echo "[General]" | doas tee /etc/iwd/main.conf
