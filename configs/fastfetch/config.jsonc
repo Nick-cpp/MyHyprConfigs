@@ -48,10 +48,6 @@
             "type": "kernel"
         },
         {
-            "key": "│  memory  {#keys}│",
-            "type": "memory"
-        },
-        {
             "key": "├───────────┤",
             "type": "custom"
         },
