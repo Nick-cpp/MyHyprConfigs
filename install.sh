@@ -1,5 +1,5 @@
 #!/bin/bash
-#DO NOT USE THIS INSTALLATION SCRIPT IS WORK IN PROGRESS
+#Testing installation script not recomended to use
 
 cd
 
