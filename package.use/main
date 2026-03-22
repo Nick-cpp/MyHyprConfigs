@@ -1,3 +1,7 @@
+#-------ADB-------
+dev-libs/libusb udev
+dev-util/android-tools udev
+
 #-----ANGBAND------
 games-roguelike/angband -X
 
