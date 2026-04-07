@@ -16,3 +16,5 @@ foot udiskie cmus mako unzip hyprpicker noto-fonts-emoji noto-fonts noto-fonts-c
 <img width="1917" height="1080" alt="image" src="https://github.com/user-attachments/assets/173b439b-1849-434b-86f7-1fbd77046d27" />
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/95271f7a-e0e8-4027-9fd3-64d9ae863ceb" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/09f5d701-3ecd-494b-9b1a-69225d52cbb5" />
