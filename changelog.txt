@@ -109,3 +109,6 @@ Upgraded fastfetch
 Now using spacefm as a file manager
 2026.03.21
 Now using pcmanfm as a file manager
+2026.04.13
+I have no idea what do i do
+Updated foot config after foot update ( i hate theese updates that break my config files )
