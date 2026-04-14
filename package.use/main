@@ -1,3 +1,6 @@
+#-----YT-DLP-----
+net-misc/yt-dlp -deno
+
 #----DOAS--------
 app-admin/doas persist
 
@@ -21,7 +24,7 @@ app-editors/vim clipboard -X
 media-video/pipewire pulseaudio sound-server
 
 #-------WAYBAR------
-gui-apps/waybar network wifi tray pulseaudio niri
+gui-apps/waybar network wifi tray pulseaudio
 
 #-------HUINYA---------
 x11-libs/libfm -automount
