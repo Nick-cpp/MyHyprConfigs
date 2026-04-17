@@ -25,6 +25,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 highlight SyntasticError cterm=underline ctermfg=red
