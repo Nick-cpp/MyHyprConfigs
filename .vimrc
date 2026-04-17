@@ -9,13 +9,14 @@ set relativenumber
 set number
 set clipboard=unnamedplus
 set so=30
-set incsearch
 set autoindent
 set smartindent
 set ignorecase
 set ttyfast
 set nocompatible
 set encoding=utf8
+set nohlsearch
+set incsearch
 filetype plugin indent on
 
 call plug#begin("~/.vim/plugged")
