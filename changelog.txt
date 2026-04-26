@@ -112,3 +112,7 @@ Now using pcmanfm as a file manager
 2026.04.13
 I have no idea what do i do
 Updated foot config after foot update ( i hate theese updates that break my config files )
+2026.04.26
+I think my rice is done i dont want to change anything there
+I will only fix some configs after updates i think
+I started learn rust btw :)
