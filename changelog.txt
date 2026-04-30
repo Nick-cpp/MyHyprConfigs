@@ -116,3 +116,5 @@ Updated foot config after foot update ( i hate theese updates that break my conf
 I think my rice is done i dont want to change anything there
 I will only fix some configs after updates i think
 I started learn rust btw :)
+2026.04.30
+Oh no hyprland is going to use LUA FILE AS A CONFIGURATION FILE so i need to rewrite my entire config damn
