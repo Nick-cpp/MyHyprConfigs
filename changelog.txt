@@ -120,3 +120,4 @@ I started learn rust btw :)
 Oh no hyprland is going to use LUA FILE AS A CONFIGURATION FILE so i need to rewrite my entire config damn
 2026.05.04
 Moved close window bind to ctrl + alt
+Moved close window bind to wim + C
