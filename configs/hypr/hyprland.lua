@@ -29,6 +29,15 @@ hl.monitor({
     scale    = "1",
 })
 
+hl.workspace_rule({workspace = 1, monitor="eDP-1"})
+hl.workspace_rule({workspace = 2, monitor="eDP-1"})
+hl.workspace_rule({workspace = 3, monitor="eDP-1"})
+hl.workspace_rule({workspace = 4, monitor="eDP-1"})
+hl.workspace_rule({workspace = 5, monitor="HDMI-A-1"})
+hl.workspace_rule({workspace = 6, monitor="HDMI-A-1"})
+hl.workspace_rule({workspace = 7, monitor="HDMI-A-1"})
+hl.workspace_rule({workspace = 8, monitor="HDMI-A-1"})
+
 ---------------------
 ---- MY PROGRAMS ----
 ---------------------
@@ -149,45 +158,38 @@ hl.config({
 })
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
-hl.curve("easeOutQuint",   { type = "bezier", points = { {0.23, 1},    {0.32, 1}    } })
-hl.curve("easeInOutCubic", { type = "bezier", points = { {0.65, 0.05}, {0.36, 1}    } })
-hl.curve("linear",         { type = "bezier", points = { {0, 0},       {1, 1}       } })
-hl.curve("almostLinear",   { type = "bezier", points = { {0.5, 0.5},   {0.75, 1}    } })
-hl.curve("quick",          { type = "bezier", points = { {0.15, 0},    {0.1, 1}     } })
+hl.curve("emphasizedDecel", { type = "bezier", points = { {0.05, 0.7}, {0.1, 1} } })
+hl.curve("emphasizedAccel", { type = "bezier", points = { {0.3, 0}, {0.8, 0.15} } })
+hl.curve("menu_decel", { type = "bezier", points = { {0.1, 1}, {0, 1} } })
+hl.curve("easeOutQuint", { type = "bezier", points = { {0.23, 1}, {0.32, 1} } })
+hl.curve("almostLinear", { type = "bezier", points = { {0.5, 0.5}, {0.75, 1.0} } })
+hl.curve("quick", { type = "bezier", points = { {0.15, 0}, {0.1, 1} } })
 
--- Default springs
-hl.curve("easy",           { type = "spring", mass = 1, stiffness = 71.2633, dampening = 15.8273644 })
+hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "default" })
 
-hl.animation({ leaf = "global",        enabled = true,  speed = 10,   bezier = "default" })
-hl.animation({ leaf = "border",        enabled = true,  speed = 5.39, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windows",       enabled = true,  speed = 4.79, spring = "easy" })
-hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 4.1,  spring = "easy",         style = "popin 87%" })
-hl.animation({ leaf = "windowsOut",    enabled = true,  speed = 1.49, bezier = "linear",       style = "popin 87%" })
-hl.animation({ leaf = "fadeIn",        enabled = true,  speed = 1.73, bezier = "almostLinear" })
-hl.animation({ leaf = "fadeOut",       enabled = true,  speed = 1.46, bezier = "almostLinear" })
-hl.animation({ leaf = "fade",          enabled = true,  speed = 3.03, bezier = "quick" })
-hl.animation({ leaf = "layers",        enabled = true,  speed = 3.81, bezier = "easeOutQuint" })
-hl.animation({ leaf = "layersIn",      enabled = true,  speed = 4,    bezier = "easeOutQuint", style = "fade" })
-hl.animation({ leaf = "layersOut",     enabled = true,  speed = 1.5,  bezier = "linear",       style = "fade" })
-hl.animation({ leaf = "fadeLayersIn",  enabled = true,  speed = 1.79, bezier = "almostLinear" })
-hl.animation({ leaf = "fadeLayersOut", enabled = true,  speed = 1.39, bezier = "almostLinear" })
-hl.animation({ leaf = "workspaces",    enabled = true,  speed = 1.94, bezier = "almostLinear", style = "fade" })
-hl.animation({ leaf = "workspacesIn",  enabled = true,  speed = 1.21, bezier = "almostLinear", style = "fade" })
-hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 1.94, bezier = "almostLinear", style = "fade" })
-hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "quick" })
+hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "easeOutQuint" })
+hl.animation({ leaf = "windows", enabled = true, speed = 4.79, bezier = "easeOutQuint" })
+hl.animation({ leaf = "windowsIn", enabled = true, speed = 4.1, bezier = "easeOutQuint", style = "popin 1%" })
+hl.animation({ leaf = "windowsOut", enabled = true, speed = 1.49, bezier = "linear", style = "popin 87%" })
+
+hl.animation({ leaf = "fade", enabled = true, speed = 3.03, bezier = "quick" })
+hl.animation({ leaf = "fadeIn", enabled = true, speed = 1.73, bezier = "almostLinear" })
+hl.animation({ leaf = "fadeOut", enabled = true, speed = 1.46, bezier = "almostLinear" })
+
+hl.animation({ leaf = "layers", enabled = true, speed = 3.81, bezier = "easeOutQuint" })
+hl.animation({ leaf = "layersIn", enabled = true, speed = 4, bezier = "easeOutQuint", style = "fade" })
+hl.animation({ leaf = "layersOut", enabled = true, speed = 1.5, bezier = "linear", style = "fade" })
+hl.animation({ leaf = "fadeLayersIn", enabled = true, speed = 1.79, bezier = "almostLinear" })
+hl.animation({ leaf = "fadeLayersOut", enabled = true, speed = 1.39, bezier = "almostLinear" })
+
+hl.animation({ leaf = "workspaces", enabled = true, speed = 7, bezier = "menu_decel", style = "slide" })
+hl.animation({ leaf = "specialWorkspaceIn", enabled = true, speed = 2.8, bezier = "emphasizedDecel", style = "slidevert" })
+hl.animation({ leaf = "specialWorkspaceOut", enabled = true, speed = 1.2, bezier = "emphasizedAccel", style = "slidevert" })
 
 -- Ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 -- "Smart gaps" / "No gaps when only"
 -- uncomment all if you wish to use that.
 
-hl.workspace_rule({workspace = 1, monitor="eDP-1"})
-hl.workspace_rule({workspace = 2, monitor="eDP-1"})
-hl.workspace_rule({workspace = 3, monitor="eDP-1"})
-hl.workspace_rule({workspace = 4, monitor="eDP-1"})
-hl.workspace_rule({workspace = 5, monitor="HDMI-A-1"})
-hl.workspace_rule({workspace = 6, monitor="HDMI-A-1"})
-hl.workspace_rule({workspace = 7, monitor="HDMI-A-1"})
-hl.workspace_rule({workspace = 8, monitor="HDMI-A-1"})
 
 -- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
 hl.config({
@@ -289,8 +291,8 @@ hl.bind(mainMod .. " + J",  hl.dsp.focus({ direction = "down" }))
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 9 do
     local key = i % 9 -- 10 maps to key 0
-    hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
-    hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
+    hl.bind(mainMod .. " + " .. key,           hl.dsp.focus({ workspace = i }))
+    hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i, follow = false }))
 end
 
 -- Scroll through existing workspaces with mainMod + scroll
@@ -323,6 +325,29 @@ hl.bind("CTRL + ALT + S", hl.dsp.exec_cmd("hyprshot -m region -o ~/Pictures/Scre
 
 -- Fullscreen
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = 1 }))
+
+-- Swap windows like in BSPWM
+hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.swap({ direction = "l" }))
+hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.swap({ direction = "d" }))
+hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.swap({ direction = "u" }))
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.swap({ direction = "r" }))
+
+-- Resize windows
+hl.bind(mainMod .. " + CTRL + H", hl.dsp.window.resize({ x = -40, y = 0, relative = true }))
+hl.bind(mainMod .. " + CTRL + L", hl.dsp.window.resize({ x = 40, y = 0, relative = true }))
+hl.bind(mainMod .. " + CTRL + K", hl.dsp.window.resize({ x = 0, y = 40, relative = true }))
+hl.bind(mainMod .. " + CTRL + J", hl.dsp.window.resize({ x = 0, y = -40, relative = true }))
+
+-- CMUS
+hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd("foot -e bash -c cmus"))
+
+-- Zen Browser
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
+
+-- Scripts
+hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("~/.scripts/power-menu.sh"))
+hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("~/.scripts/opacity.sh"))
+hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd("~/.scripts/unopacity.sh"))
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
