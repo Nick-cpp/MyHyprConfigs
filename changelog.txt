@@ -121,3 +121,5 @@ Oh no hyprland is going to use LUA FILE AS A CONFIGURATION FILE so i need to rew
 2026.05.04
 Moved close window bind to ctrl + alt
 Moved close window bind to wim + C
+2026.05.15
+I rewrote the entire config in less than 4 hours now is on lua
