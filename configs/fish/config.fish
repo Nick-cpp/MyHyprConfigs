@@ -5,10 +5,11 @@
 alias g="git"
 alias c="clear"
 alias fucking="doas"
-alias wmconf="vim ~/.config/hypr/"
+alias wmconf="vim ~/.config/hypr/hyprland.lua"
 alias plant="cbonsai"
 alias wifi="impala"
 alias dv="doas vim"
+alias ff="fastfetch --config ~/.config/fastfetch/gentoo.jsonc"
 
 if status is-interactive
 end
