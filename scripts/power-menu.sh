@@ -6,14 +6,14 @@ case "$choice" in
     "Reboot")
         confirm=$(echo -e "Yes\nNo" | wofi --dmenu --prompt="Reboot?" --height=130 --width=200)
         if [ "$confirm" = "Yes" ]; then
-            pkill -15 -x hyprland
+            pkill -15 -x Hyprland
             loginctl reboot
         fi
         ;;
     "Shutdown")
         confirm=$(echo -e "Yes\nNo" | wofi --dmenu --prompt="Shutdown?" --height=130 --width=200)
         if [ "$confirm" = "Yes" ]; then
-            pkill -15 -x hyprland
+            pkill -15 -x Hyprland
             loginctl poweroff
         fi
         ;;
