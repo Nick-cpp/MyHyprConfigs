@@ -318,6 +318,11 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 -- Lockscreen
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("hyprlock"))
 
+-- Screenshot
+hl.bind("CTRL + ALT + S", hl.dsp.exec_cmd("hyprshot -m region -o ~/Pictures/Screenshots -s"))
+
+-- Fullscreen
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = 1 }))
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
