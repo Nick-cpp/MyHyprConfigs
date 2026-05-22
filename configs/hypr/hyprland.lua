@@ -60,6 +60,7 @@ local browser     = "zen-browser"
 --
 hl.on("hyprland.start", function () 
   hl.exec_cmd("waybar & swww-daemon")
+  hl.exec_cmd("~/.scripts/eye.sh")
   hl.exec_cmd("udiskie")
   hl.exec_cmd("/usr/libexec/polkit-mate-authentication-agent-1")
 end)
@@ -253,7 +254,6 @@ hl.config({
 
 hl.gesture({ fingers = 3, direction = "horizontal", action = "workspace" })
 hl.gesture({ fingers = 3, direction = "pinchin", action = function() hl.exec_cmd(menu) end })
-
 hl.gesture({ fingers = 3, direction = "down", mods = "ALT", action = "close" })
 
 -- Example per-device config
@@ -346,6 +346,7 @@ hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 
 -- Scripts
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("~/.scripts/power-menu.sh"))
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("~/.scripts/wallpaper.sh"))
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("~/.scripts/opacity.sh"))
 hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd("~/.scripts/unopacity.sh"))
 
@@ -397,4 +398,31 @@ hl.window_rule({
 
     move  = "20 monitor_h-120",
     float = true,
+})
+
+hl.window_rule({
+  name          = "eye-break-logic",
+  match         = { initial_class = "^(eye-break)$" },
+  float         = true,
+  center        = true,
+  size          = {325, 210},
+})
+
+hl.window_rule({
+  match = { class = "^(org.pulseaudio.pavucontrol)$" },
+  float = true,
+  size  = {800, 500},
+  move  = {"monitor_w - 806", 35},
+})
+
+hl.window_rule({
+  match  = { class = "^(steam)$" },
+  tile   = true,
+  pseudo = true,
+  size   = {1600, 900},
+})
+
+hl.window_rule({
+  match  = { title = "^(Steam)$" },
+  pseudo = true,
 })
