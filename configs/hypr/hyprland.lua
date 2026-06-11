@@ -234,7 +234,7 @@ hl.config({
         kb_layout  = "us,ru",
         kb_variant = "",
         kb_model   = "",
-        kb_options = "grp:win_space_toggle",
+        kb_options = "grp:caps_toggle",
         kb_rules   = "",
 
         follow_mouse = 1,
@@ -243,7 +243,7 @@ hl.config({
 
         touchpad = {
             natural_scroll = true,
-            disable_while_typing = true,
+            disable_while_typing = false,
             clickfinger_behavior = false,
             middle_button_emulation = true,
             tap_to_click = true,
