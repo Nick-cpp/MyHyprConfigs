@@ -1,0 +1,3 @@
+*/* VIDEO_CARDS: -* nvidia
+*/* nvidia vdpau nvenc
+x11-drivers/nvidia-drivers -kernel-open
