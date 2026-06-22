@@ -1,3 +1,6 @@
+#----OBS--------
+media-video/obs-studio alsa browser fdk speex v4l websocket pulseaudio lua
+
 #----DOAS--------
 app-admin/doas persist
 
@@ -40,7 +43,7 @@ app-text/xmlto text
 dev-qt/qttools opengl
 dev-qt/qtbase icu opengl
 dev-qt/qtdeclarative opengl
->=media-video/ffmpeg-8.0.1 vpx opus
+>=media-video/ffmpeg-8.0.1 vpx opus lame x264
 >=dev-libs/libxml2-2.15.1 icu
 >=media-libs/harfbuzz-12.3.2 icu
 sys-libs/zlib minizip abi_x86_32
