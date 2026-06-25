@@ -16,7 +16,7 @@
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
-    output   = "eDP-1",
+    output   = "eDP-2",
     mode     = "1920x1080@144.02800",
     position = "0x0",
     scale    = "1",
@@ -59,10 +59,10 @@ local browser     = "zen-browser"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function () 
-  hl.exec_cmd("waybar & swww-daemon")
-  hl.exec_cmd("~/.scripts/eye.sh")
-  hl.exec_cmd("udiskie")
-  hl.exec_cmd("/usr/libexec/polkit-mate-authentication-agent-1")
+    hl.exec_cmd("waybar & swww-daemon")
+    hl.exec_cmd("~/.scripts/eye.sh")
+    hl.exec_cmd("udiskie")
+    hl.exec_cmd("/usr/libexec/polkit-mate-authentication-agent-1")
 end)
 
 
@@ -243,7 +243,7 @@ hl.config({
 
         touchpad = {
             natural_scroll = true,
-            disable_while_typing = false,
+            disable_while_typing = true,
             clickfinger_behavior = false,
             middle_button_emulation = true,
             tap_to_click = true,
@@ -335,8 +335,8 @@ hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.swap({ direction = "r" }))
 -- Resize windows
 hl.bind(mainMod .. " + CTRL + H", hl.dsp.window.resize({ x = -40, y = 0, relative = true }))
 hl.bind(mainMod .. " + CTRL + L", hl.dsp.window.resize({ x = 40, y = 0, relative = true }))
-hl.bind(mainMod .. " + CTRL + K", hl.dsp.window.resize({ x = 0, y = 40, relative = true }))
-hl.bind(mainMod .. " + CTRL + J", hl.dsp.window.resize({ x = 0, y = -40, relative = true }))
+hl.bind(mainMod .. " + CTRL + K", hl.dsp.window.resize({ x = 0, y = -40, relative = true }))
+hl.bind(mainMod .. " + CTRL + J", hl.dsp.window.resize({ x = 0, y = 40, relative = true }))
 
 -- CMUS
 hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd("foot -e bash -c cmus"))
@@ -425,4 +425,14 @@ hl.window_rule({
 hl.window_rule({
   match  = { title = "^(Steam)$" },
   pseudo = true,
+})
+
+hl.window_rule({
+  match = {
+    class = "^(pcmanfm)$",
+    title = "^[A-Za-z]+ files$" 
+  },
+  float  = true,
+  center = true,
+  size   = {500, 100},
 })
