@@ -1,1 +1,1 @@
-hyprctl keyword decoration:active_opacity 1 && hyprctl keyword decoration:inactive_opacity 1
+hyprctl -r eval 'hl.window_rule({ match = { class = "negative:^foot$" }, opacity = "1 override 1 override" })'
