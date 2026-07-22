@@ -9,6 +9,11 @@ alias wmconf="vim ~/.config/hypr/hyprland.lua"
 alias wifi="impala"
 alias dv="doas vim"
 alias ff="fastfetch --config ~/.config/fastfetch/gentoo.jsonc"
+alias weather="curl 'wttr.in/Tyumen'"
+
+function sheet
+        curl "cheat.sh/$argv"
+end
 
 if status is-interactive
 end
