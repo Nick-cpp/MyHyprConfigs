@@ -48,15 +48,6 @@
             "type": "kernel"
         },
         {
-            "key": "├───────────┤",
-            "type": "custom"
-        },
-        {
-            "key": "│  colors  {#keys}│",
-            "type": "colors",
-            "symbol": "circle"
-        },
-        {
             "key": "╰───────────╯",
             "type": "custom"
         }
