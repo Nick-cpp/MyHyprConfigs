@@ -127,3 +127,5 @@ I rewrote the entire config in less than 4 hours now is on lua
 Added highlighting of current day in waybar calendar
 2026.07.22
 Added some useful functions in fish configuraton
+2026.07.30
+Added Throne to autostart
