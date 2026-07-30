@@ -61,8 +61,9 @@ local browser     = "zen-browser"
 --
 hl.on("hyprland.start", function () 
     hl.exec_cmd("waybar & swww-daemon")
-    hl.exec_cmd("~/.scripts/eye.sh")
+    --hl.exec_cmd("~/.scripts/eye.sh")
     hl.exec_cmd("udiskie")
+    hl.exec_cmd("Throne -tray")
     hl.exec_cmd("/usr/libexec/polkit-mate-authentication-agent-1")
 end)
 
@@ -416,17 +417,17 @@ hl.window_rule({
   move  = {"monitor_w - 806", 35},
 })
 
-hl.window_rule({
-  match  = { class = "^(steam)$" },
-  tile   = true,
-  pseudo = true,
-  size   = {1600, 900},
-})
+--hl.window_rule({
+  --match  = { class = "^(steam)$" },
+  --tile   = true,
+  --pseudo = true,
+  --size   = {1600, 900},
+--})
 
-hl.window_rule({
-  match  = { title = "^(Steam)$" },
-  pseudo = true,
-})
+--hl.window_rule({
+  --match  = { title = "^(Steam)$" },
+  --pseudo = true,
+--})
 
 hl.window_rule({
   match = {
