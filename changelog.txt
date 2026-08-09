@@ -129,3 +129,5 @@ Added highlighting of current day in waybar calendar
 Added some useful functions in fish configuraton
 2026.07.30
 Added Throne to autostart
+2026.08.09
+Im worked on my own distro last month but i broke a few bones and i cant work anymore
