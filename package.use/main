@@ -1,3 +1,27 @@
+#----LF----
+app-misc/lf -static
+
+#--GNOME-BOXES-
+>=dev-libs/libportal-0.9.1 gtk
+>=net-misc/spice-gtk-0.42-r4 smartcard vala
+>=app-emulation/spice-0.16.0 smartcard
+>=app-emulation/qemu-10.2.2 spice usbredir smartcard
+>=app-text/poppler-26.05.0-r1 cairo
+>=net-misc/spice-gtk-0.42-r4 usbredir
+>=net-dns/dnsmasq-2.92_p2 script
+
+#--OS-PROBER
+>=sys-boot/grub-2.14-r5 mount
+
+#---VIRTMANAGER
+#>=net-dns/dnsmasq-2.92_p2 script
+#>=net-libs/gnutls-3.8.13 tools pkcs11
+#app-emulation/virt-manager gui
+#>=net-misc/spice-gtk-0.42-r4 usbredir
+
+#----QEMU-----
+app-emulation/qemu gtk
+
 #----OBS--------
 media-video/obs-studio alsa browser fdk speex v4l websocket pulseaudio lua
 
