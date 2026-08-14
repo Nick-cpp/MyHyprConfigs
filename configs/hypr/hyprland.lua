@@ -60,9 +60,12 @@ local browser     = "zen-browser"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function () 
+    hl.exec_cmd("pipewire")
+    hl.exec_cmd("wireplumber")
+    hl.exec_cmd("pipewire-pulse")
     hl.exec_cmd("waybar & swww-daemon")
     --hl.exec_cmd("~/.scripts/eye.sh")
-    hl.exec_cmd("udiskie")
+    --hl.exec_cmd("udiskie")
     hl.exec_cmd("Throne -tray")
     hl.exec_cmd("/usr/libexec/polkit-mate-authentication-agent-1")
 end)
@@ -333,6 +336,12 @@ hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.swap({ direction = "l" }))
 hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.swap({ direction = "d" }))
 hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.swap({ direction = "u" }))
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.swap({ direction = "r" }))
+
+-- Move windows
+hl.bind(mainMod .. " + ALT + H", hl.dsp.window.move({ direction = "l" }))
+hl.bind(mainMod .. " + ALT + J", hl.dsp.window.move({ direction = "d" }))
+hl.bind(mainMod .. " + ALT + K", hl.dsp.window.move({ direction = "u" }))
+hl.bind(mainMod .. " + ALT + L", hl.dsp.window.move({ direction = "r" }))
 
 -- Resize windows
 hl.bind(mainMod .. " + CTRL + H", hl.dsp.window.resize({ x = -40, y = 0, relative = true }))
