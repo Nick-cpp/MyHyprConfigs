@@ -172,13 +172,13 @@ hl.curve("almostLinear", { type = "bezier", points = { {0.5, 0.5}, {0.75, 1.0} }
 hl.curve("quick", { type = "bezier", points = { {0.15, 0}, {0.1, 1} } })
 
 hl.curve("overshoot", { type = "bezier", points = { {0.1, 1.15}, {0, 1} } })
-hl.curve("moveOvershoot", { type = "bezier", points = { {0.25, 1.15}, {0.5, 1} } })
+hl.curve("moveOvershoot", { type = "bezier", points = { {0.25, 1.20}, {0.5, 1} } })
 hl.curve("popOvershoot", { type = "bezier", points = { {0.15, 1.35}, {0.1, 1} } })
 
 hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "default" })
 
 hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windowsMove", enabled = true, speed = 3.8, bezier = "moveOvershoot" })
+hl.animation({ leaf = "windowsMove", enabled = true, speed = 3.0, bezier = "moveOvershoot" })
 hl.animation({ leaf = "windowsIn", enabled = true, speed = 4.5, bezier = "popOvershoot", style = "popin 70%" })
 hl.animation({ leaf = "windowsOut", enabled = true, speed = 2.5, bezier = "emphasizedAccel", style = "popin 80%" })
 
