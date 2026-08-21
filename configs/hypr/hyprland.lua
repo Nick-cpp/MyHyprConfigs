@@ -47,7 +47,7 @@ hl.workspace_rule({ workspace = "8", monitor = "HDMI-A-1", default = true })
 local terminal    = "foot"
 local fileManager = "pcmanfm"
 local menu        = "wofi --show drun"
-local browser     = "zen-browser"
+local browser     = "librewolf"
 
 
 -------------------
@@ -171,12 +171,16 @@ hl.curve("easeOutQuint", { type = "bezier", points = { {0.23, 1}, {0.32, 1} } })
 hl.curve("almostLinear", { type = "bezier", points = { {0.5, 0.5}, {0.75, 1.0} } })
 hl.curve("quick", { type = "bezier", points = { {0.15, 0}, {0.1, 1} } })
 
+hl.curve("overshoot", { type = "bezier", points = { {0.1, 1.15}, {0, 1} } })
+hl.curve("moveOvershoot", { type = "bezier", points = { {0.25, 1.15}, {0.5, 1} } })
+hl.curve("popOvershoot", { type = "bezier", points = { {0.15, 1.35}, {0.1, 1} } })
+
 hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "default" })
 
 hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windows", enabled = true, speed = 4.79, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windowsIn", enabled = true, speed = 4.1, bezier = "easeOutQuint", style = "popin 1%" })
-hl.animation({ leaf = "windowsOut", enabled = true, speed = 1.49, bezier = "linear", style = "popin 87%" })
+hl.animation({ leaf = "windowsMove", enabled = true, speed = 3.8, bezier = "moveOvershoot" })
+hl.animation({ leaf = "windowsIn", enabled = true, speed = 4.5, bezier = "popOvershoot", style = "popin 70%" })
+hl.animation({ leaf = "windowsOut", enabled = true, speed = 2.5, bezier = "emphasizedAccel", style = "popin 80%" })
 
 hl.animation({ leaf = "fade", enabled = true, speed = 3.03, bezier = "quick" })
 hl.animation({ leaf = "fadeIn", enabled = true, speed = 1.73, bezier = "almostLinear" })
@@ -188,7 +192,7 @@ hl.animation({ leaf = "layersOut", enabled = true, speed = 1.5, bezier = "linear
 hl.animation({ leaf = "fadeLayersIn", enabled = true, speed = 1.79, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeLayersOut", enabled = true, speed = 1.39, bezier = "almostLinear" })
 
-hl.animation({ leaf = "workspaces", enabled = true, speed = 7, bezier = "menu_decel", style = "slide" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 5, bezier = "overshoot", style = "slide" })
 hl.animation({ leaf = "specialWorkspaceIn", enabled = true, speed = 2.8, bezier = "emphasizedDecel", style = "slidevert" })
 hl.animation({ leaf = "specialWorkspaceOut", enabled = true, speed = 1.2, bezier = "emphasizedAccel", style = "slidevert" })
 
