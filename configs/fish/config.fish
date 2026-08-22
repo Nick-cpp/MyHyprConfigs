@@ -6,7 +6,7 @@ alias g="git"
 alias c="clear"
 alias wmconf="vim ~/.config/hypr/hyprland.lua"
 alias wifi="impala"
-alias sv="super vim"
+alias dv="doas vim"
 alias ff="fastfetch --config ~/.config/fastfetch/gentoo.jsonc"
 alias weather="curl 'wttr.in/Tyumen'"
 
