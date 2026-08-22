@@ -4,10 +4,9 @@
 
 alias g="git"
 alias c="clear"
-alias fucking="doas"
 alias wmconf="vim ~/.config/hypr/hyprland.lua"
 alias wifi="impala"
-alias dv="doas vim"
+alias sv="super vim"
 alias ff="fastfetch --config ~/.config/fastfetch/gentoo.jsonc"
 alias weather="curl 'wttr.in/Tyumen'"
 
@@ -21,8 +20,11 @@ end
 set -U fish_greeting
 
 function super
-    su -c "$argv"
+    su -c "sh -c '$argv'"
 end
+
+complete -c super -x -a '(__fish_complete_subcommand)'
+
 function fish_prompt
     set -l cyan (set_color cyan)
     set -l blue (set_color blue)
