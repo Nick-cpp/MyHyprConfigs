@@ -64,7 +64,6 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("wireplumber")
     hl.exec_cmd("pipewire-pulse")
     hl.exec_cmd("waybar & swww-daemon")
-    hl.exec_cmd("hypridle")
     --hl.exec_cmd("~/.scripts/eye.sh")
     hl.exec_cmd("udiskie")
     hl.exec_cmd("Throne -tray")
@@ -328,7 +327,7 @@ hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
 -- Lockscreen
-hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("loginctl lock-session"))
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("hyprlock"))
 
 -- Screenshot
 hl.bind("CTRL + ALT + S", hl.dsp.exec_cmd("hyprshot -m region -o ~/Pictures/Screenshots -s"))
