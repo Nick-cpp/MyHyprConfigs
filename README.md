@@ -6,7 +6,7 @@
 
 Packages
 
-foot udiskie cmus mako unzip hyprpicker noto-fonts-emoji noto-fonts noto-fonts-cjk nwg-look gthumb pcmanfm hyprland waybar wofi ttf-font-awesome otf-font-awesome ttf-jetbrains-mono fish ttf-dejavu fastfetch pavucontrol hyprshot hyprlock hypridle git
+foot udiskie cmus mako unzip hyprpicker noto-fonts-emoji noto-fonts noto-fonts-cjk nwg-look gthumb pcmanfm hyprland waybar wofi ttf-font-awesome otf-font-awesome ttf-jetbrains-mono fish ttf-dejavu fastfetch pavucontrol hyprshot hyprlock git
 
 
 <img width="1916" height="1080" alt="image" src="https://github.com/user-attachments/assets/12c04d93-d1c6-4075-8c4d-3526b3154392" />
