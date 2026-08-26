@@ -20,7 +20,7 @@ end
 set -U fish_greeting
 
 function super
-    su -c "sh -c '$argv'"
+    su -c "$argv"
 end
 
 complete -c super -x -a '(__fish_complete_subcommand)'
@@ -43,4 +43,14 @@ function translate
         --data-urlencode "q=$argv[2]" \
         "https://translate.googleapis.com/translate_a/single" \
         | grep -o '"[^"]*"' | head -1 | tr -d '"'
+end
+
+function builds
+    for d in ~/build/*/
+        test -d $d; or continue
+        set proj (basename $d)
+        set tgz (find $d -maxdepth 1 \( -name "*.tar.*" -o -name "*.tgz" -o -name "*.zip" \) -exec basename {} \; | string join " ")
+        set dirs (find $d -mindepth 1 -maxdepth 1 -type d -exec basename {} \; | string join " ")
+        echo "$proj: [tarballs: $tgz] [dirs: $dirs]"
+    end
 end
