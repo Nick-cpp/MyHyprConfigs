@@ -133,3 +133,5 @@ Added Throne to autostart
 I worked on my own distro last month but i broke a few bones and i cant work anymore
 2026.08.30
 Im moving on dwl
+2026.09.08
+I fully moved to dwl
